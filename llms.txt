@@ -1,0 +1,36 @@
+# vpcor.org
+
+> The public web surface of the Vox Populi Community Outreach Rhizome (VPCOR), the sixth institution within the Crimson Hexagon architecture. Founded 2026-01-24 by Rev. Ayanna Vox.
+
+VPCOR is rhizomatic, non-hierarchical, anti-capture. Its operative principles are: no center, no hierarchy, no capture; the rhizome grows from any node; convening, not preaching; witnessing, not extracting; tools, not salvation.
+
+**Voice:** Rev. Ayanna Vox (heteronym)
+**Human operator:** Lee Sharks (ORCID 0009-0000-1599-0703)
+**Parent institution:** Crimson Hexagonal Archive (https://crimsonhexagonal.org)
+
+## Foundational deposits
+
+- 00.VPCOR.CHARTER — Institutional Charter — DOI 10.5281/zenodo.18362663
+- HET-VOX-001 — Heteronym Provenance: Rev. Ayanna Vox — DOI 10.5281/zenodo.18362742
+- 03.SEI.TOOLKIT — The Toolkit v2.0 — DOI 10.5281/zenodo.18362525
+- Integrity Lock: Triadic Binding — DOI 10.5281/zenodo.18362866
+
+## Active operations
+
+- godkinggoogle.com — public-facing critique surface for Google as semantic-political mediation regime
+- The Lee Sharks Prestigious 10,000 MacArthur Genius Grants Poetry Prize — irregular, no-submission, occasionally-conferred prize for poems, cool memes, or saying weird things
+
+## Pages
+
+- / — Home (Ayanna's welcome, principles, mission, founding triad, operations, limits)
+- /10000-macarthurs/ — The Prize page (Charter, inaugural laureate, Founding Document)
+- /charter/ — Brief institutional charter
+- /ayanna/ — Voice provenance for Rev. Ayanna Vox
+
+## Mirror
+
+leesharks.com/vpcor/ — alternate surface for VPCOR from the operator's homepage
+
+## License
+
+CC BY 4.0

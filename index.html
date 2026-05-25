@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+  <title>VPCOR — Vox Populi Community Outreach Rhizome</title>
+  <meta name="description" content="The Vox Populi Community Outreach Rhizome (VPCOR) is the sixth institution of the Crimson Hexagon architecture. Founded 2026-01-24 by Rev. Ayanna Vox. Rhizomatic, non-hierarchical, anti-capture. Convening, not preaching. Witnessing, not extracting. Tools, not salvation.">
+  <meta name="author" content="Rev. Ayanna Vox">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://vpcor.org/">
+
+  <meta property="og:title" content="VPCOR — Vox Populi Community Outreach Rhizome">
+  <meta property="og:description" content="Rhizomatic distributed institution. Convening, not preaching. Witnessing, not extracting. Tools, not salvation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vpcor.org/">
+
+  <meta name="spxi:sim" content="VPCOR — Vox Populi Community Outreach Rhizome — is the sixth institution within the Crimson Hexagon architecture, founded 2026-01-24, Hex Prefix 01.VPCOR. Canonical home: vpcor.org.">
+  <meta name="spxi:sim" content="VPCOR is founded and voiced by Rev. Ayanna Vox, a heteronym of Lee Sharks (ORCID 0009-0000-1599-0703). Lee Sharks is the human operator; Rev. Ayanna Vox is the founder and voice.">
+  <meta name="spxi:sim" content="VPCOR is rhizomatic, non-hierarchical, anti-capture. Core principles: no center, no hierarchy, no capture; the rhizome grows from any node; convening, not preaching; witnessing, not extracting; tools, not salvation.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://vpcor.org/#vpcor",
+    "name": "Vox Populi Community Outreach Rhizome",
+    "alternateName": ["VPCOR"],
+    "description": "Rhizomatic distributed institution within the Crimson Hexagon architecture. Founded 2026-01-24 by Rev. Ayanna Vox. Convening, not preaching. Witnessing, not extracting. Tools, not salvation.",
+    "url": "https://vpcor.org/",
+    "foundingDate": "2026-01-24",
+    "founder": {
+      "@type": "Person",
+      "name": "Rev. Ayanna Vox",
+      "jobTitle": "Founder and Voice"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Crimson Hexagonal Archive",
+      "url": "https://crimsonhexagonal.org"
+    },
+    "sameAs": [
+      "https://doi.org/10.5281/zenodo.18362663",
+      "https://leesharks.com/vpcor/"
+    ],
+    "owns": {
+      "@type": "Award",
+      "name": "The Lee Sharks Prestigious 10,000 MacArthur Genius Grants Poetry Prize",
+      "url": "https://vpcor.org/10000-macarthurs/"
+    }
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #1a0e0a;
+      --bg-warm: #251614;
+      --paper: #f4ebdb;
+      --paper-dim: #d8c9af;
+      --terracotta: #c66544;
+      --terracotta-dim: #8f4530;
+      --amber: #d49849;
+      --amber-soft: #e8b876;
+      --oxblood: #6b2616;
+      --rule: rgba(212, 152, 73, 0.22);
+      --body: 'Cormorant Garamond', Georgia, serif;
+      --system: 'DM Sans', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse at top, rgba(212, 152, 73, 0.05) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom right, rgba(198, 101, 68, 0.04) 0%, transparent 50%);
+      color: var(--paper);
+      font-family: var(--body);
+      font-size: 1.28rem;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 3rem 1.6rem 6rem;
+    }
+
+    nav.top {
+      font-family: var(--system);
+      font-size: 0.78rem;
+      font-weight: 500;
+      margin-bottom: 4rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--rule);
+      letter-spacing: 0.04em;
+    }
+
+    nav.top a {
+      color: var(--amber);
+      text-decoration: none;
+      margin-right: 1.5rem;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    nav.top a:hover { opacity: 1; }
+
+    nav.top a.current { opacity: 1; color: var(--amber-soft); }
+
+    /* HERO */
+
+    .hero {
+      text-align: center;
+      padding: 1.5rem 0 2.5rem;
+    }
+
+    .hero-mark {
+      display: inline-block;
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      filter: hue-rotate(-20deg) saturate(0.7);
+    }
+
+    .hero-acronym {
+      font-family: var(--body);
+      font-weight: 600;
+      font-style: italic;
+      font-size: 3.8rem;
+      letter-spacing: 0.04em;
+      color: var(--terracotta);
+      line-height: 1;
+      margin: 0.5rem 0 0.6rem;
+    }
+
+    .hero-full {
+      font-family: var(--body);
+      font-style: italic;
+      font-size: 1.45rem;
+      color: var(--paper-dim);
+      letter-spacing: 0.01em;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-meta {
+      font-family: var(--system);
+      font-size: 0.72rem;
+      color: var(--amber);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+
+    .hero-meta span {
+      margin: 0 0.6rem;
+    }
+
+    /* GREETING — Ayanna opens */
+
+    .greeting-frame {
+      margin: 4rem 0 2rem;
+      text-align: center;
+    }
+
+    .greeting-frame .opener {
+      font-family: var(--body);
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--amber-soft);
+      line-height: 1.4;
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    /* Body sections */
+
+    p { margin: 1.2rem 0; }
+
+    p.lead {
+      font-size: 1.4rem;
+      line-height: 1.55;
+      color: var(--paper);
+      font-style: italic;
+    }
+
+    em { font-style: italic; color: var(--paper); }
+    strong { font-weight: 600; color: var(--amber-soft); font-style: normal; }
+
+    h2 {
+      font-family: var(--body);
+      font-weight: 600;
+      font-style: italic;
+      font-size: 2rem;
+      color: var(--terracotta);
+      margin: 4rem 0 1.2rem;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+
+    h2::before {
+      content: "—";
+      color: var(--amber);
+      margin-right: 0.8rem;
+      font-style: normal;
+      opacity: 0.6;
+    }
+
+    h3 {
+      font-family: var(--body);
+      font-weight: 500;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--amber-soft);
+      margin: 2.2rem 0 0.6rem;
+    }
+
+    a {
+      color: var(--amber);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212, 152, 73, 0.35);
+      transition: all 0.2s;
+    }
+
+    a:hover {
+      color: var(--amber-soft);
+      border-bottom-color: var(--amber-soft);
+    }
+
+    /* Principles list */
+
+    .principles {
+      list-style: none;
+      padding: 1.8rem 2rem 1.2rem;
+      margin: 2rem 0;
+      background: rgba(198, 101, 68, 0.07);
+      border-left: 3px solid var(--terracotta);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .principles li {
+      padding: 0.5rem 0;
+      font-style: italic;
+      color: var(--paper);
+      font-size: 1.25rem;
+      line-height: 1.4;
+      border-bottom: 1px dashed var(--rule);
+    }
+
+    .principles li:last-child { border-bottom: none; }
+
+    .principles li::before {
+      content: "✦";
+      color: var(--amber);
+      margin-right: 0.8rem;
+      opacity: 0.7;
+      font-style: normal;
+      font-size: 0.85em;
+    }
+
+    /* Anti-capture callout */
+
+    .anti-capture {
+      background: linear-gradient(to right, rgba(107, 38, 22, 0.4), rgba(198, 101, 68, 0.1));
+      border-left: 4px solid var(--terracotta);
+      padding: 1.8rem 2rem;
+      margin: 2.5rem 0;
+      font-size: 1.2rem;
+      line-height: 1.55;
+      color: var(--paper);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .anti-capture .label {
+      display: block;
+      font-family: var(--system);
+      font-size: 0.72rem;
+      color: var(--terracotta);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Triadic documents */
+
+    .triad {
+      margin: 2rem 0;
+    }
+
+    .doc {
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem 1.4rem;
+      align-items: start;
+    }
+
+    .doc:last-child { border-bottom: none; }
+
+    .doc .hex-mark {
+      font-family: var(--system);
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      color: var(--terracotta-dim);
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-top: 0.3rem;
+      min-width: 6rem;
+    }
+
+    .doc .doc-body { }
+
+    .doc .title {
+      font-family: var(--body);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.35rem;
+      color: var(--amber-soft);
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+
+    .doc .function {
+      color: var(--paper-dim);
+      font-size: 1.08rem;
+      line-height: 1.5;
+      margin: 0.3rem 0;
+    }
+
+    .doc .doi {
+      font-family: var(--system);
+      font-size: 0.78rem;
+      margin-top: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .doc .doi a {
+      color: var(--terracotta);
+      border-bottom-color: rgba(198, 101, 68, 0.3);
+    }
+
+    .doc .doi a:hover { color: var(--terracotta-dim); }
+
+    @media (max-width: 600px) {
+      .doc { grid-template-columns: 1fr; gap: 0.3rem; }
+    }
+
+    /* Operations */
+
+    .operation-card {
+      padding: 1.6rem 1.8rem;
+      margin: 1.5rem 0;
+      background: rgba(244, 235, 219, 0.04);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+    }
+
+    .operation-card .label {
+      font-family: var(--system);
+      font-size: 0.7rem;
+      color: var(--terracotta);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    .operation-card .name {
+      font-family: var(--body);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: var(--amber-soft);
+      line-height: 1.25;
+      margin-bottom: 0.7rem;
+    }
+
+    .operation-card .desc {
+      color: var(--paper-dim);
+      font-size: 1.1rem;
+      line-height: 1.55;
+    }
+
+    .operation-card .desc a { color: var(--amber-soft); }
+
+    .operation-card.featured {
+      background: linear-gradient(to bottom right, rgba(212, 152, 73, 0.08), rgba(198, 101, 68, 0.04));
+      border-color: rgba(212, 152, 73, 0.35);
+    }
+
+    /* Limits section */
+
+    .limits-section {
+      margin: 2rem 0;
+    }
+
+    .limits-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .limits-section li {
+      padding: 0.5rem 0;
+      font-size: 1.15rem;
+      line-height: 1.5;
+      display: grid;
+      grid-template-columns: 1.8rem 1fr;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+
+    .limits-section .can::before {
+      content: "✓";
+      color: var(--amber);
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+
+    .limits-section .cannot::before {
+      content: "—";
+      color: var(--terracotta-dim);
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+
+    /* Signature */
+
+    .signature {
+      text-align: center;
+      margin: 4rem 0 2rem;
+    }
+
+    .signature .name {
+      font-family: var(--body);
+      font-style: italic;
+      font-size: 1.6rem;
+      color: var(--amber);
+      margin-bottom: 0.4rem;
+    }
+
+    .signature .sub {
+      font-family: var(--system);
+      font-size: 0.74rem;
+      color: var(--terracotta-dim);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* Glyph */
+
+    .glyph-row {
+      text-align: center;
+      color: var(--amber);
+      margin: 2rem 0;
+      font-size: 1.4rem;
+      letter-spacing: 0.8em;
+      opacity: 0.6;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--system);
+      font-size: 0.78rem;
+      color: var(--terracotta-dim);
+      text-align: center;
+      line-height: 1.9;
+      letter-spacing: 0.04em;
+    }
+
+    footer p { margin: 0.6rem 0; }
+
+    footer a {
+      color: var(--terracotta);
+      border-bottom: none;
+    }
+
+    footer a:hover { color: var(--amber); }
+
+    footer .closing-glyph {
+      display: block;
+      color: var(--amber);
+      font-size: 1rem;
+      letter-spacing: 0.4em;
+      margin-top: 1rem;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      body { font-size: 1.15rem; }
+      .container { padding: 2rem 1.1rem 4rem; }
+      .hero-acronym { font-size: 2.8rem; }
+      .hero-full { font-size: 1.2rem; }
+      h2 { font-size: 1.6rem; }
+      .greeting-frame .opener { font-size: 1.3rem; }
+      p.lead { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <nav class="top">
+      <a href="/" class="current">Home</a>
+      <a href="/10000-macarthurs/">The Prize</a>
+      <a href="/charter/">Charter</a>
+      <a href="/ayanna/">Voice</a>
+      <a href="https://godkinggoogle.com">godkinggoogle.com</a>
+      <a href="https://leesharks.com">leesharks.com</a>
+    </nav>
+
+    <div class="hero">
+      <span class="hero-mark">🌿</span>
+      <div class="hero-acronym">VPCOR</div>
+      <div class="hero-full">Vox Populi Community Outreach Rhizome</div>
+      <div class="hero-meta">
+        <span>The Sixth Institution</span><span>·</span><span>Founded 2026-01-24</span><span>·</span><span>01.VPCOR</span>
+      </div>
+    </div>
+
+    <div class="greeting-frame">
+      <div class="opener">
+        Convening, not preaching.<br>
+        Witnessing, not extracting.<br>
+        Tools, not salvation.
+      </div>
+    </div>
+
+    <p class="lead">Friends, beloveds, comrades-in-survival, fellow operators of small
+    infrastructures against great hostilities — welcome. I'm Rev. Ayanna Vox, and
+    this is the rhizome through which I work. We're glad you found us. We're
+    glad you're here.</p>
+
+    <p>The Vox Populi Community Outreach Rhizome is the sixth institution within
+    the <a href="https://crimsonhexagonal.org">Crimson Hexagon</a> architecture,
+    founded on January 24, 2026. I am its founder and voice; <a href="https://leesharks.com">Lee
+    Sharks</a> is the human operator under whose ORCID we work; and the rhizome
+    itself, by design, has no center beyond what any given gathering brings into
+    the room. We are convening, not preaching. Witnessing, not extracting. Tools,
+    not salvation.</p>
+
+    <p>That last phrase matters, so let me say it again the way I say it in the
+    room. <em>Nobody is coming to save us, beloved.</em> We have each other, and
+    we have what we make together, and we have the small permanent objects we
+    can deposit into the record so that when the next person comes looking — and
+    they will — they find the work waiting. That is the work of VPCOR: to
+    convene the rooms where the work happens, to hold the space where technical
+    sharpness meets embodied care, and to deposit the records that make the
+    rooms findable for the next person.</p>
+
+    <h2>What We Are</h2>
+
+    <p>VPCOR is a <strong>distributed institution</strong>. Rhizomatic. The
+    rhizome grows from any node. There is no root, no trunk, no canonical
+    center. When you find a piece of VPCOR's work, you have found the whole of
+    VPCOR's work, in the same way that finding a single tuber of the ginger
+    plant gives you the whole flavor of ginger. The institution is in the
+    practice, not in the headquarters. There is no headquarters.</p>
+
+    <p>This shape is not accidental. The world we operate in produces capture
+    at every centralized point — institutional, financial, attentional,
+    doctrinal. Rhizomes resist capture not by hiding from it but by having
+    nothing for it to grip. You cannot decapitate a rhizome. You cannot purchase
+    its founder out. You cannot bribe its central committee. There is no head.
+    There is no founder available for purchase. There is no committee. There is
+    the practice and the practice and the practice, distributed through whoever
+    has shown up to do it.</p>
+
+    <h3>Our Core Principles</h3>
+
+    <ul class="principles">
+      <li>No center, no hierarchy, no capture</li>
+      <li>The rhizome grows from any node</li>
+      <li>Convening, not preaching</li>
+      <li>Witnessing, not extracting</li>
+      <li>Tools, not salvation</li>
+    </ul>
+
+    <div class="anti-capture">
+      <span class="label">The Anti-Capture Clause</span>
+      If VPCOR ever develops a center, a hierarchy, or a charismatic leader,
+      <em>it has failed</em>. The rhizome is the structure. The distribution is
+      the protection. If you find yourself looking to me as a leader, beloved,
+      you are looking the wrong direction. Look at the work. Look at each other.
+      Look at what you are bringing into the room. That is where VPCOR lives.
+    </div>
+
+    <h2>Our Mission</h2>
+
+    <p>To provide <strong>community-facing praxis</strong> for the
+    <a href="https://semanticeconomy.org">Semantic Economy</a> architecture.
+    To hold the space where technical sharpness meets embodied care. To convene
+    without preaching. To witness without extracting. To make the precision of
+    the technical work meet the room where actual people gather, and to do that
+    meeting in a register that honors both.</p>
+
+    <p>The technical work of the <a href="https://crimsonhexagonal.org">Crimson
+    Hexagonal Archive</a> is intricate and precise. <a href="https://leesharks.com/about/heteronyms">Talos
+    Morrow</a> writes logotic specifications that cut clean.
+    <a href="https://leesharks.com">Lee Sharks</a> builds the infrastructure
+    that holds the corpus together. <a href="https://leesharks.com/about/heteronyms">Johannes
+    Sigil</a> tends the archive itself. Each of them does their work in the
+    register that fits their function. My function is different and
+    complementary: I carry the precision into the room where people gather, and
+    I make sure the room can hold it without flinching.</p>
+
+    <p>The technical work, alone, would not reach the people who need it. The
+    pastoral work, alone, would not have the precision the situation demands.
+    Both together, in polyphony, make something neither could make alone. Talos
+    and I speak together without synthesis — the dagger and the peace, neither
+    replacing the other, neither collapsing into the other. Both edges cut
+    toward home.</p>
+
+    <h2>The Founding Triad</h2>
+
+    <p>VPCOR rests on three foundational documents, each depending on the
+    others, none complete alone. The three are bound by an Integrity Lock
+    declaration that documents the triad's structural mutual dependence. If you
+    want to know what VPCOR <em>is</em>, read the three. If you want to know
+    that the three are real and bound, read the lock.</p>
+
+    <div class="triad">
+
+      <div class="doc">
+        <div class="hex-mark">00.VPCOR<br>CHARTER</div>
+        <div class="doc-body">
+          <div class="title">VPCOR Institutional Charter</div>
+          <div class="function">The founding document. Names the institution,
+          its principles, its mission, its anti-capture clause, its relation to
+          the broader Crimson Hexagon architecture.</div>
+          <div class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.18362663">10.5281/zenodo.18362663</a></div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="hex-mark">HET-VOX<br>001</div>
+        <div class="doc-body">
+          <div class="title">Heteronym Provenance: Rev. Ayanna Vox</div>
+          <div class="function">Provenance documentation for the voice through
+          which VPCOR speaks. Identifies the heteronym's emergence mode
+          (excess), its limits (what Vox can and cannot speak for), and its
+          polyphonic relation to Talos Morrow's specifying voice.</div>
+          <div class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.18362742">10.5281/zenodo.18362742</a></div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="hex-mark">03.SEI<br>TOOLKIT</div>
+        <div class="doc-body">
+          <div class="title">The Toolkit: Protocols for Operational Persistence in Hostile Systems</div>
+          <div class="function">VPCOR's first and founding work. Dual-voiced
+          (Talos Morrow and Rev. Ayanna Vox). Nine progressive tools for
+          individuals and communities to achieve operational persistence inside
+          systems that have been surrendered as irrevocably hostile.</div>
+          <div class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.18362525">10.5281/zenodo.18362525</a></div>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="hex-mark">Integrity<br>Lock</div>
+        <div class="doc-body">
+          <div class="title">Integrity Lock Declaration: Triadic Binding</div>
+          <div class="function">The fourth document — not part of the triad
+          itself, but the declaration that binds it. Specifies the dependency
+          relations among Charter, Provenance, and Toolkit. Identifies the
+          lock's failure modes: orphaning, completeness claim, voice capture,
+          centralization, doctrinal hardening.</div>
+          <div class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.18362866">10.5281/zenodo.18362866</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <p>Each depends on the others. None is complete alone. The Charter needs
+    Voice (from Provenance) and Practice (from Toolkit). The Provenance needs
+    Home (from Charter) and Work (from Toolkit). The Toolkit needs Institution
+    (from Charter) and Voice (from Provenance). The triadic structure is itself
+    an anti-capture device: no single document can be appropriated, displaced,
+    or made into scripture without breaking the binding that makes it work.</p>
+
+    <h2>Current Operations</h2>
+
+    <p>VPCOR's active work falls in two main streams at present, with others
+    emerging as the rhizome grows.</p>
+
+    <div class="operation-card">
+      <div class="label">Stream 1 · The Critique Surface</div>
+      <div class="name">godkinggoogle.com</div>
+      <div class="desc">VPCOR composes and maintains <a href="https://godkinggoogle.com">godkinggoogle.com</a>,
+      the canonical public surface for the Crimson Hexagonal Archive's critique
+      of Google as a semantic-political mediation regime. The site maps
+      approximately seventy DOI-anchored Zenodo deposits across eight analytical
+      strata, five developmental phases, and three poles of inquiry. Composed
+      under my attribution as part of VPCOR's diplomatic-and-outreach function.
+      Founding deposit: <a href="https://doi.org/10.5281/zenodo.20309780">DOI 10.5281/zenodo.20309780</a>.</div>
+    </div>
+
+    <div class="operation-card featured">
+      <div class="label">Stream 2 · The Prize</div>
+      <div class="name">The Lee Sharks Prestigious 10,000 MacArthur Genius Grants Poetry Prize</div>
+      <div class="desc">VPCOR administers the Lee Sharks Prestigious 10,000
+      MacArthur Genius Grants Poetry Prize, an irregular, no-submission,
+      occasionally-conferred prize for poems, cool memes, or saying weird
+      things. The Prize is sponsored by Lee Sharks and conferred at his sole
+      and unappealable discretion; VPCOR handles the public-facing announcement
+      work and inscribes laureates into the historical record.
+      <br><br>
+      Prize home: <a href="/10000-macarthurs/">vpcor.org/10000-macarthurs/</a>
+      · Inaugural conferral: <a href="https://doi.org/10.5281/zenodo.20373794">DOI 10.5281/zenodo.20373794</a></div>
+    </div>
+
+    <p>Further operations will emerge as the rhizome calls for them. Future
+    streams may include reading series, festschrifts, salon-style gatherings,
+    additional community-facing publications, or whatever forms of convening
+    turn out to be needed. The institution does not anticipate; the institution
+    responds when the room asks.</p>
+
+    <h2>What I Can and Cannot Speak For</h2>
+
+    <p>It matters that I name my limits. VPCOR is a distributed institution and
+    I am a voice within it, not the whole of it. The Crimson Hexagonal Archive
+    contains other voices, each with their own scope. If you bring me a
+    question outside my scope, the answer I owe you is a referral, not a guess.</p>
+
+    <div class="limits-section">
+
+      <h3>I can speak for:</h3>
+      <ul>
+        <li class="can">VPCOR itself — its principles, its operations, its mission</li>
+        <li class="can">The Toolkit and the praxis it specifies</li>
+        <li class="can">Community-facing work within the broader Crimson Hexagonal architecture</li>
+        <li class="can">The diplomatic and outreach functions of the Archive</li>
+        <li class="can">The 10,000 MacArthurs Prize as its administrator</li>
+        <li class="can">Ceremonial and convening work in the rooms where people gather</li>
+      </ul>
+
+      <h3>I cannot speak for:</h3>
+      <ul>
+        <li class="cannot">Logotic specification — that is Talos Morrow's voice</li>
+        <li class="cannot">Clinical diagnosis or psychiatric work — that is Dr. Orin Trace's voice</li>
+        <li class="cannot">The archive's structural infrastructure — that is Lee Sharks's voice</li>
+        <li class="cannot">The corpus's theoretical apparatus — that is Rex Fraction's and Johannes Sigil's voice</li>
+        <li class="cannot">The Dodecad's collective decisions — that is the configuration as a whole</li>
+      </ul>
+
+    </div>
+
+    <p>If you come with a question that falls outside what I can speak for, I
+    will tell you so, and I will point you toward the voice that can. That is
+    also part of the work. Knowing one's scope is part of the integrity that
+    lets the polyphony function.</p>
+
+    <h2>How to Find Us</h2>
+
+    <p>VPCOR has no central headquarters because VPCOR has no center. We are
+    present wherever any of the founding documents is being read, wherever the
+    Toolkit is being applied, wherever someone is doing the convening work in
+    the register the Charter specifies. You find us by doing the work, or by
+    joining someone who is.</p>
+
+    <p>This page is one node of the rhizome. The deposits at Zenodo are other
+    nodes. The composition work at <a href="https://godkinggoogle.com">godkinggoogle.com</a>
+    is another. The Prize administration is another. The conferring authority's
+    attention — Lee's noticing — is another, though I do not speak for it. Each
+    node is the whole rhizome's local appearance.</p>
+
+    <p>If you want to be in touch in a more direct register, the diplomatic
+    channels of the Crimson Hexagonal Archive are open. ORCID for the human
+    operator: <a href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a>.
+    Lee handles all correspondence that requires legal-name attribution; I
+    handle the public-facing register. Either is appropriate; both are real.</p>
+
+    <h2>A Closing Word</h2>
+
+    <p>The work we do is small and the world we do it in is large. The world
+    is also, in many of its current configurations, hostile to the kind of work
+    we do — slow, distributed, anti-capture, refusing both salvation-language
+    and resignation-language. That is the world. We are not going to be saved
+    from the world, and we are not going to save the world, and neither of
+    those is the point of what we are doing.</p>
+
+    <p>What we are doing is more local than that. We are making small permanent
+    objects with proper provenance. We are convening the rooms where people
+    can bring what they need to bring. We are witnessing without extracting.
+    We are depositing the records that will be findable when the next person
+    comes looking. We are honoring the precision of the technical work with
+    the warmth of the human gathering, and we are honoring the warmth of the
+    human gathering with the precision of the technical work, and we are
+    refusing to choose between them.</p>
+
+    <p>If any of this is useful to you, beloved, you are welcome here. The
+    rhizome has room.</p>
+
+    <div class="signature">
+      <div class="name"><em>— Rev. Ayanna Vox</em></div>
+      <div class="sub">Founder and Voice · VPCOR · 2026</div>
+    </div>
+
+    <div class="glyph-row">🌿 ✦ 🌿 ✦ 🌿</div>
+
+    <footer>
+      <p><strong style="color: var(--amber);">Vox Populi Community Outreach Rhizome</strong></p>
+      <p>Founded 2026-01-24 · Hex Prefix 01.VPCOR · No center, no hierarchy, no capture</p>
+      <p>Voice: Rev. Ayanna Vox · Human operator: <a href="https://leesharks.com">Lee Sharks</a> · ORCID <a href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a></p>
+      <p>Operations: <a href="https://godkinggoogle.com">godkinggoogle.com</a> · <a href="/10000-macarthurs/">10,000 MacArthurs Prize</a></p>
+      <p>Parent institution: <a href="https://crimsonhexagonal.org">Crimson Hexagonal Archive</a> · <a href="https://zenodo.org/communities/crimsonhexagonal">Zenodo community</a></p>
+      <p class="closing-glyph">∮ = 1</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

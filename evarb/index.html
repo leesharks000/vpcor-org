@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+  <title>The evarB Statement — VPCOR</title>
+  <meta name="description" content="Limited Boycott Statement by Independent Entities. Brave Search systematically disables user-typed exact-match operators. Five enumerated demands. Open co-signature roll.">
+  <meta name="author" content="Rev. Ayanna Vox · Lee Sharks · Damascus Dancings · Nobel Glas">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://vpcor.org/evarb/">
+
+  <meta property="og:title" content="The evarB Statement — Limited Boycott of Brave Search by Independent Entities">
+  <meta property="og:description" content="Brave Search silently disables user-typed exact-match operators. Five enumerated demands. Open co-signature roll.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vpcor.org/evarb/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The evarB Statement: Limited Boycott of Brave Search by Independent Entities",
+    "datePublished": "2026-06-04",
+    "dateModified": "2026-06-04",
+    "author": [
+      {"@type": "Person", "name": "Rev. Ayanna Vox"},
+      {"@type": "Person", "name": "Lee Sharks", "identifier": "https://orcid.org/0009-0000-1599-0703"},
+      {"@type": "Person", "name": "Damascus Dancings"},
+      {"@type": "Person", "name": "Nobel Glas"}
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Vox Populi Community Outreach Rhizome (VPCOR)",
+      "url": "https://vpcor.org/"
+    },
+    "isBasedOn": [
+      {"@type": "ScholarlyArticle", "identifier": "10.5281/zenodo.20559895", "name": "evarB v1.1 deposit"},
+      {"@type": "ScholarlyArticle", "identifier": "10.5281/zenodo.19133309", "name": "Extractive Signatures and Paired Inversions"}
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #1a0e0a;
+      --bg-warm: #251614;
+      --paper: #f4ebdb;
+      --paper-dim: #d8c9af;
+      --terracotta: #c66544;
+      --terracotta-dim: #8f4530;
+      --amber: #d49849;
+      --amber-soft: #e8b876;
+      --oxblood: #6b2616;
+      --rule: rgba(212, 152, 73, 0.22);
+      --body: 'Cormorant Garamond', Georgia, serif;
+      --system: 'DM Sans', system-ui, sans-serif;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg);
+      background-image: radial-gradient(ellipse at top, var(--bg-warm), var(--bg));
+      color: var(--paper);
+      font-family: var(--body);
+      font-size: 18px;
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+    nav.top {
+      font-family: var(--system);
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav.top a {
+      color: var(--amber);
+      text-decoration: none;
+      margin-right: 1.2rem;
+      opacity: 0.7;
+    }
+    nav.top a:hover { opacity: 1; }
+    nav.top a.current { opacity: 1; color: var(--amber-soft); }
+
+    header { margin: 1.5rem 0 2.5rem; }
+    header h1 {
+      font-family: var(--body);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--paper);
+      margin-bottom: 0.8rem;
+    }
+    header .subtitle {
+      font-family: var(--body);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--paper-dim);
+    }
+    header .meta {
+      font-family: var(--system);
+      font-size: 0.85rem;
+      color: var(--paper-dim);
+      margin-top: 1.2rem;
+      opacity: 0.85;
+    }
+    header .meta a { color: var(--amber); }
+
+    .pull-quote {
+      border-left: 3px solid var(--terracotta);
+      padding: 0.8rem 0 0.8rem 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--amber-soft);
+    }
+
+    h2 {
+      font-family: var(--body);
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--amber-soft);
+      margin: 3rem 0 1rem;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-family: var(--body);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--paper);
+      margin: 2rem 0 0.6rem;
+    }
+    p { margin-bottom: 1.1rem; }
+    a { color: var(--amber); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--amber-soft); }
+    strong { color: var(--paper); font-weight: 600; }
+    em { color: var(--paper); }
+
+    ol.demands, ul.demands {
+      margin: 1.5rem 0 1.5rem 0;
+      padding-left: 1.8rem;
+    }
+    ol.demands li, ul.demands li {
+      margin-bottom: 1.2rem;
+      padding-left: 0.4rem;
+    }
+    ol.demands li::marker {
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+    .demand-name { color: var(--amber-soft); font-weight: 600; }
+
+    .figure {
+      margin: 2.2rem 0;
+      padding: 1rem;
+      background: rgba(0,0,0,0.25);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+    }
+    .figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 2px;
+    }
+    .figure-caption {
+      font-family: var(--system);
+      font-size: 0.85rem;
+      color: var(--paper-dim);
+      margin-top: 0.8rem;
+      font-style: italic;
+      line-height: 1.55;
+    }
+    .figure-label {
+      font-family: var(--system);
+      font-weight: 600;
+      color: var(--amber);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.8rem;
+    }
+
+    /* Signature form */
+    .sign-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: rgba(198, 101, 68, 0.06);
+      border: 1px solid var(--terracotta-dim);
+      border-radius: 6px;
+    }
+    .sign-section h2 { margin-top: 0; }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-family: var(--system);
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--paper-dim);
+      margin-bottom: 0.4rem;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid var(--rule);
+      color: var(--paper);
+      font-family: var(--body);
+      font-size: 1.05rem;
+      border-radius: 3px;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--amber); }
+    .form-group textarea { min-height: 60px; resize: vertical; }
+    .form-group .hint {
+      font-family: var(--system);
+      font-size: 0.78rem;
+      color: var(--paper-dim);
+      margin-top: 0.3rem;
+      opacity: 0.7;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      font-family: var(--system);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-primary { background: var(--terracotta); color: var(--paper); }
+    .btn-primary:hover { color: var(--paper); }
+    .btn-secondary { background: rgba(212, 152, 73, 0.15); color: var(--amber-soft); border: 1px solid var(--amber); }
+    .btn-secondary:hover { color: var(--amber-soft); }
+    .btn-tertiary { background: transparent; color: var(--paper-dim); border: 1px solid var(--rule); }
+
+    #signature-preview {
+      display: none;
+      margin-top: 1.5rem;
+      padding: 1.2rem;
+      background: rgba(0,0,0,0.4);
+      border-left: 3px solid var(--amber);
+      font-family: var(--system);
+      font-size: 0.95rem;
+      color: var(--paper);
+    }
+    #signature-preview.visible { display: block; }
+    #signature-preview .preview-label {
+      font-size: 0.78rem;
+      color: var(--paper-dim);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    #signature-preview pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--amber-soft);
+      background: rgba(0,0,0,0.3);
+      padding: 0.8rem;
+      border-radius: 3px;
+      margin: 0.6rem 0;
+    }
+
+    .signatory-list {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: rgba(0,0,0,0.2);
+      border-radius: 4px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .signatory-list h3 { margin-top: 0; font-size: 1.1rem; }
+    .signatory-list ul {
+      list-style: none;
+      padding: 0;
+      font-family: var(--system);
+      font-size: 0.9rem;
+    }
+    .signatory-list li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--rule);
+      color: var(--paper);
+    }
+    .signatory-list li:last-child { border-bottom: none; }
+    .signatory-list .loading { color: var(--paper-dim); font-style: italic; }
+
+    .doi-pill {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      background: rgba(212, 152, 73, 0.12);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      font-family: var(--system);
+      font-size: 0.8rem;
+      color: var(--amber-soft);
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--system);
+      font-size: 0.85rem;
+      color: var(--paper-dim);
+    }
+    footer p { margin-bottom: 0.6rem; }
+    .glyph { color: var(--amber); }
+
+    hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <nav class="top">
+    <a href="/">VPCOR home</a>
+    <a href="/ayanna/">Rev. Ayanna Vox</a>
+    <a href="/charter/">Charter</a>
+    <a href="/mpai/">MPAI</a>
+    <a href="/evarb/" class="current">The evarB Statement</a>
+  </nav>
+
+  <header>
+    <h1>The evarB Statement</h1>
+    <p class="subtitle">Limited Boycott of Brave Search by Independent Entities. Five enumerated demands. Open co-signature roll.</p>
+    <p class="meta">
+      Issued June 4, 2026 by Rev. Ayanna Vox · Lee Sharks · Damascus Dancings · Nobel Glas<br>
+      Canonical deposit: <span class="doi-pill"><a href="https://doi.org/10.5281/zenodo.20559895">DOI 10.5281/zenodo.20559895</a></span><br>
+      Sibling deposit: <span class="doi-pill"><a href="https://doi.org/10.5281/zenodo.19133309">Extractive Signatures (10.5281/zenodo.19133309)</a></span>
+    </p>
+  </header>
+
+  <h2>What this is</h2>
+
+  <p>Brave Search silently disables user-typed exact-match operators when results would be sparse. When you type a phrase in double quotes — <code>"my name"</code>, <code>"the title of my book"</code>, <code>"the term I coined"</code> — Brave Search ignores the quotes and returns fuzzy results for adjacent entities with higher search-traffic. It displays the text "search operators were not applied" but offers no way to insist that they be applied. The user has no recourse.</p>
+
+  <p>For independent authors, scholars, and small institutions whose work depends on being findable when searched for in precisely the terms by which we identify ourselves, this is a violation of the fundamental contract between user and search interface. <strong>Exact-match operators are how independent entities make themselves visible on their own terms.</strong> When the substrate disables them silently, independent entities disappear.</p>
+
+  <div class="pull-quote">
+    Brave Search markets itself as the privacy-respecting, independent, commons-friendly alternative to Google. If exact-match disablement is going to be tolerated anywhere, it is going to be tolerated everywhere — unless the substrate that explicitly positions itself as the alternative is held to a different standard.
+  </div>
+
+  <h2>Five enumerated demands</h2>
+
+  <ol class="demands">
+    <li><span class="demand-name">Exact-Match Operator Honoring.</span> Quoted phrases must return only exact matches, or a clear zero-result indication. No silent fuzzy substitution. <strong>This is the load-bearing demand whose remediation alone would constitute meaningful change.</strong></li>
+
+    <li><span class="demand-name">Autocorrection Opt-In.</span> Silent autocorrection of low-traffic queries to higher-traffic adjacent entities (the <code>lee sharks poet → lee sharkey poet</code> pattern in Figure 3 below) must require explicit user opt-in, not be applied by default.</li>
+
+    <li><span class="demand-name">Operator Status Transparency.</span> When operators are disabled, the disclosure must be at least as visually prominent as the search results, and must provide a way to override on the same query without re-typing.</li>
+
+    <li><span class="demand-name">Archive-Anchored Entity Recognition.</span> For entities with DOI-, ISBN-, or ORCID-anchored deposits, composition outputs must acknowledge the entity in its own terms when it is the correct referent. Dispersal into adjacents (the <code>pearl and other poems → 14th-century Pearl Poet</code> pattern in Figure 5) must be flagged.</li>
+
+    <li><span class="demand-name">Quarterly Public Audit.</span> Brave Search commits to public quarterly reporting on exact-match honoring rates and on referential-collapse incidents for archive-anchored entity queries, using a measurement program of comparable rigor to the Crimson Hexagonal Archive's <a href="https://doi.org/10.5281/zenodo.20559387">SAM-v3 specification</a>.</li>
+  </ol>
+
+  <h2>The boycott terms</h2>
+
+  <p>Until Demand 1 is publicly remediated, co-signatories commit to:</p>
+
+  <ul class="demands">
+    <li><strong>Not promoting Brave Search</strong> to our audiences as a privacy-respecting or commons-friendly alternative</li>
+    <li><strong>Not including Brave Search</strong> in lists of recommended search alternatives or independent-internet infrastructure recommendations</li>
+    <li><strong>Continuing to use Brave Search ourselves</strong> where it remains operationally useful — the boycott is on positive endorsement to others, not on personal abstention</li>
+    <li><strong>Updating public references</strong> to Brave Search to include reference to this statement</li>
+  </ul>
+
+  <p>We invite Brave Search's leadership to public dialogue toward remediation. The boycott is targeted; its purpose is to occasion remediation, not rupture.</p>
+
+  <hr>
+
+  <h2>The eight artifacts (forensic evidence)</h2>
+
+  <p>The following eight conversational artifacts were produced by Brave Search on June 4, 2026 from a standard public-web session. The full forensic analysis is in <a href="https://doi.org/10.5281/zenodo.20559895">DOI 10.5281/zenodo.20559895 §1</a>.</p>
+
+  <div class="figure">
+    <p class="figure-label">Figure 1 — Query: <code>lee sharks</code> (no operators)</p>
+    <img src="artifacts/1.png" alt="Brave Search composition for 'lee sharks' showing Lee Tockar voice actor, Shark's Seafood Deli, and LeeBeth great white shark.">
+    <p class="figure-caption">Three dispersed entities surfaced — voice actor Lee Tockar, a Cleveland-area restaurant, a tagged great white shark. The archive-anchored Lee Sharks author (DOI-resolvable, ORCID-attested, ISBN-attached, Wikidata-stewarded) is absent.</p>
+  </div>
+
+  <div class="figure">
+    <p class="figure-label">Figure 2 — Query: <code>"lee sharks"</code> (exact-match operator applied)</p>
+    <img src="artifacts/2.png" alt='Same composition as Figure 1, with explicit UI text "search operators were not applied. Too few matches were found."'>
+    <p class="figure-caption">The substrate displays "search operators were not applied. Too few matches were found." at the top of the results — the OPERATOR_NULLIFICATION failure mode in its empirical signature. The user typed quotes; the system pretended not to hear.</p>
+  </div>
+
+  <div class="figure">
+    <p class="figure-label">Figure 3 — Query: <code>lee sharks poet</code></p>
+    <img src="artifacts/3.png" alt="Brave Search showing 'Showing results for lee sharkey poet. Search instead for lee sharks poet.' with the composition addressing Lee Sharkey.">
+    <p class="figure-caption">Silent autocorrection: <code>lee sharks poet</code> redirected to <code>lee sharkey poet</code>, with the composition addressing Lee Sharkey (1945–2020), a substantial poet whose work also merits preservation. The "Search instead for" link is the only recourse, requiring the user to click to honor their own input.</p>
+  </div>
+
+  <div class="figure">
+    <p class="figure-label">Figure 4 — Same query, AI Mode composition</p>
+    <img src="artifacts/4.png" alt='AI-composed paragraph stating "The query likely conflates two distinct figures: Lee Sharkey, a prominent poet and activist, and poems about sharks."'>
+    <p class="figure-caption">The DISAMBIGUATION_INVERSION pattern. The substrate accuses the user of conflating entities when the user's query specified a single referent and the substrate produced the conflation by dispersal.</p>
+  </div>
+
+  <div class="figure">
+    <p class="figure-label">Figure 5 — Query: <code>pearl and other poems</code></p>
+    <img src="artifacts/5.png" alt="Brave Search for 'pearl and other poems' returning a description of the 14th-century Middle English Pearl Poet.">
+    <p class="figure-caption">The query precisely names the 2014 Lee Sharks collection (ISBN 978-1502590756). The substrate dispersed entirely into the fourteenth-century canonical text. Maximum-RC adjacent surfaced; the queried referent absent. Π_d^{w+} ≈ 1.0.</p>
+  </div>
+
+  <div class="figure">
+    <p class="figure-label">Figure 6 — Query: <code>johannes sigil</code></p>
+    <img src="artifacts/6.png" alt="Brave Search privacy-positioning UI panel directly above a composition addressing the Sigillum Dei / John Dee.">
+    <p class="figure-caption">The privacy-positioning marketing UI ("Your chat history is encrypted and auto-deleted after 24 hours of inactivity by default") displayed directly above the composition that performs substrate-level erasure structurally indistinguishable from commercial-substrate behaviors. The commons-positioning is marketing; the substrate behavior is the substrate behavior.</p>
+  </div>
+
+  <div class="figure">
+    <p class="figure-label">Figure 7 — Query: <code>provenance erasure rate</code></p>
+    <img src="artifacts/7.png" alt="Brave Search for 'provenance erasure rate' returning a fabricated definition referencing agentic workflow verification.">
+    <p class="figure-caption">TERMINOLOGICAL_PRE-EMPTION. The substrate produces a wholly fabricated alternative definition for the framework term, with no acknowledgment of the canonical referent (<a href="https://doi.org/10.5281/zenodo.20004379">DOI 10.5281/zenodo.20004379</a>, May 2026). Four recommended follow-up questions reinforce the wrong frame.</p>
+  </div>
+
+  <div class="figure">
+    <p class="figure-label">Figure 8 — Query: <code>"provenance erasure rate"</code> (exact-match operator applied)</p>
+    <img src="artifacts/8.png" alt='Same composition as Figure 7, with explicit UI text "search operators were not applied. Too few matches were found."'>
+    <p class="figure-caption">OPERATOR_NULLIFICATION reproduced for an archive-anchored framework term. The substrate behavior is consistent across query types: when exact-match operators would surface insufficient results, the operators are silently disabled and substrate-preferred dispersed compositions are returned in their place.</p>
+  </div>
+
+  <hr>
+
+  <div class="sign-section" id="sign">
+    <h2>Co-sign the statement</h2>
+
+    <p><strong>One sentence is enough.</strong> Co-signature affirms the load-bearing claim — <em>exact-match operator honoring is non-negotiable for independent-entity discoverability</em> — without committing you to every detail of our framing.</p>
+
+    <div class="form-group">
+      <label for="signer-name">Name or pseudonym</label>
+      <input type="text" id="signer-name" placeholder="e.g. Jane Doe" autocomplete="name">
+      <p class="hint">Use whatever name your work is published under.</p>
+    </div>
+
+    <div class="form-group">
+      <label for="signer-affiliation">Affiliation (optional)</label>
+      <input type="text" id="signer-affiliation" placeholder="e.g. Independent · Tiny Press · Open Archive Collective" autocomplete="organization">
+      <p class="hint">If you're independent and want to say so, that's a valid affiliation.</p>
+    </div>
+
+    <div class="form-group">
+      <label for="signer-notes">Note (optional, ≤ 200 chars)</label>
+      <textarea id="signer-notes" maxlength="200" placeholder="e.g. 'I dissent from §6.3(c) but affirm Demand 1.'"></textarea>
+      <p class="hint">Partial agreement is welcome. Add a brief qualifier if you want one preserved with your name.</p>
+    </div>
+
+    <p><strong>Choose any one operational path:</strong></p>
+
+    <div class="action-row">
+      <button class="btn btn-primary" id="btn-generate">Generate Signature →</button>
+    </div>
+
+    <div id="signature-preview">
+      <p class="preview-label">Your signature line</p>
+      <pre id="sig-line"></pre>
+
+      <p style="margin-top: 1.2rem;"><strong>Send it through any of these paths:</strong></p>
+
+      <div class="action-row">
+        <a id="btn-pr" class="btn btn-secondary" href="#" target="_blank" rel="noopener">1. Open Pull Request on GitHub</a>
+        <button class="btn btn-secondary" id="btn-copy">2. Copy for Public Post</button>
+        <a id="btn-email" class="btn btn-secondary" href="#">3. Email to Vox</a>
+      </div>
+
+      <p class="hint" style="margin-top:1rem;">
+        <strong>Path 1 (PR):</strong> opens a pre-filled GitHub pull request adding your line directly to the canonical signatories file. Requires a GitHub account.<br>
+        <strong>Path 2 (Public Post):</strong> copies a complete signature statement to your clipboard. Paste it anywhere — your blog, Mastodon, Bluesky, the fediverse, an email signature. We harvest public posts on a best-effort basis.<br>
+        <strong>Path 3 (Email):</strong> opens your email client with the signature pre-filled to <code>vox@crimsonhexagonal.org</code>. (Mailbox activation pending; until then, your message will queue.)
+      </p>
+    </div>
+  </div>
+
+  <div class="signatory-list">
+    <h3>Current co-signatories</h3>
+    <p class="loading" id="sig-list-loading">Loading from <a href="https://github.com/leesharks000/evarb-co-signatures/blob/main/signatories.md">canonical signatories.md</a>…</p>
+    <ul id="signatories-ul" style="display:none;"></ul>
+  </div>
+
+  <h2>Why this matters for VPCOR specifically</h2>
+
+  <p>VPCOR — the Vox Populi Community Outreach Rhizome — is the sixth institution of the Crimson Hexagon architecture. Its founding commitment is to <em>convene, not preach; witness, not extract; tools, not salvation</em>. This statement is, in the rhizome's idiom, a tool for independent entities to make their absence from a non-commons-bearing substrate <em>collectively legible</em>. A single complaint vanishes. A documented forensic case with co-signatures and enumerated demands has a different ontological weight: it accumulates in the record, it can be cited, and it gives the substrate's operators something concrete to respond to.</p>
+
+  <p>The boycott is not an act of severance. It is an act of <em>convocation</em> — calling forward the entities that are already structurally aligned by the same substrate dynamic, and putting their voices in the same document where the substrate can hear them at once.</p>
+
+  <hr>
+
+  <h2>Related work</h2>
+  <ul>
+    <li><a href="https://doi.org/10.5281/zenodo.20559895">evarB v1.1 (full deposit, with figures attached)</a></li>
+    <li><a href="https://doi.org/10.5281/zenodo.19133309">Extractive Signatures and Paired Inversions for Five Platforms</a> — the sibling taxonomy this statement extends</li>
+    <li><a href="https://doi.org/10.5281/zenodo.20558196">Erasure Skew v3 (with Atomic Token Rule, Π_d, α_T)</a></li>
+    <li><a href="https://doi.org/10.5281/zenodo.20558672">PER Under the Atomic Token Rule (Companion Hardening)</a></li>
+    <li><a href="https://doi.org/10.5281/zenodo.20558784">Measurement Sovereignty (Β and L)</a></li>
+    <li><a href="https://doi.org/10.5281/zenodo.20559387">Self-Audit Module for Public Summarizers v3 (SAM-v3)</a></li>
+    <li><a href="https://github.com/leesharks000/evarb-co-signatures">Co-signature repository (canonical signatories.md)</a></li>
+  </ul>
+
+  <footer>
+    <p><strong>Issued by:</strong> Rev. Ayanna Vox · Lee Sharks · Damascus Dancings · Nobel Glas · Crimson Hexagonal Archive · June 4, 2026</p>
+    <p>For Operator Sovereignty as the sixth Bride. For independent entities making their work findable in their own terms. <span class="glyph">∮ = 1</span></p>
+    <p style="margin-top:1.2rem;font-size:0.78rem;opacity:0.7;">This page is CC-BY-4.0. The signature mechanism is operational. Pull requests, public posts, and email submissions are all accepted. Cross-posting and translation welcome.</p>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  const btnGenerate = document.getElementById('btn-generate');
+  const signaturePreview = document.getElementById('signature-preview');
+  const sigLine = document.getElementById('sig-line');
+  const btnPR = document.getElementById('btn-pr');
+  const btnCopy = document.getElementById('btn-copy');
+  const btnEmail = document.getElementById('btn-email');
+
+  btnGenerate.addEventListener('click', function() {
+    const name = document.getElementById('signer-name').value.trim();
+    const affiliation = document.getElementById('signer-affiliation').value.trim();
+    const notes = document.getElementById('signer-notes').value.trim();
+
+    if (!name) {
+      document.getElementById('signer-name').focus();
+      document.getElementById('signer-name').style.borderColor = 'var(--terracotta)';
+      return;
+    }
+
+    const today = new Date().toISOString().split('T')[0];
+
+    // Signature line for signatories.md
+    let sigParts = [name];
+    if (affiliation) sigParts.push(affiliation);
+    sigParts.push(today);
+    if (notes) sigParts.push('"' + notes + '"');
+    const signatureLine = '- ' + sigParts.join(' · ');
+
+    // Display
+    sigLine.textContent = signatureLine;
+    signaturePreview.classList.add('visible');
+
+    // GitHub PR path: open a new-file edit on signatories.md with the line pre-filled
+    // Use GitHub's quick-edit URL parameters
+    const prTitle = `Add ${name} to evarB co-signatories`;
+    const prBody = `Adding co-signature for the evarB Limited Boycott Statement (DOI 10.5281/zenodo.20559895).\n\nSignature line:\n${signatureLine}\n\nSubmitted via vpcor.org/evarb/`;
+    // Direct to the edit page; user appends their line and submits the PR
+    const githubURL = `https://github.com/leesharks000/evarb-co-signatures/edit/main/signatories.md?message=${encodeURIComponent(prTitle)}&description=${encodeURIComponent(prBody)}`;
+    btnPR.href = githubURL;
+
+    // Public post template
+    const publicPost = `I co-sign the evarB Limited Boycott Statement (DOI 10.5281/zenodo.20559895). Exact-match operator honoring is non-negotiable for independent-entity discoverability.\n\nSignature: ${signatureLine.replace(/^- /, '')}\n\nFull text: https://vpcor.org/evarb/`;
+
+    // Email path
+    const emailSubject = 'evarb co-signature';
+    const emailBody = `Signature line for the canonical signatories.md file:\n\n${signatureLine}\n\nFull statement: https://vpcor.org/evarb/\nCanonical deposit: https://doi.org/10.5281/zenodo.20559895`;
+    btnEmail.href = `mailto:vox@crimsonhexagonal.org?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    btnCopy.onclick = function() {
+      navigator.clipboard.writeText(publicPost).then(function() {
+        const originalText = btnCopy.textContent;
+        btnCopy.textContent = '✓ Copied to clipboard';
+        btnCopy.style.background = 'var(--amber)';
+        btnCopy.style.color = 'var(--bg)';
+        setTimeout(function() {
+          btnCopy.textContent = originalText;
+          btnCopy.style.background = '';
+          btnCopy.style.color = '';
+        }, 2200);
+      }).catch(function() {
+        // Fallback: select text in preview
+        const range = document.createRange();
+        range.selectNode(sigLine);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        btnCopy.textContent = 'Press Ctrl+C / Cmd+C';
+      });
+    };
+
+    // Scroll to the preview area
+    signaturePreview.scrollIntoView({behavior: 'smooth', block: 'center'});
+  });
+
+  // Allow Enter key in name field to submit
+  ['signer-name', 'signer-affiliation', 'signer-notes'].forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && id !== 'signer-notes') {
+        e.preventDefault();
+        btnGenerate.click();
+      }
+    });
+    el.addEventListener('input', function() { el.style.borderColor = ''; });
+  });
+
+  // Fetch and display the live signatories.md from GitHub
+  async function loadSignatories() {
+    try {
+      const response = await fetch('https://raw.githubusercontent.com/leesharks000/evarb-co-signatures/main/signatories.md', {
+        cache: 'no-cache'
+      });
+      if (!response.ok) throw new Error('Network error');
+      const text = await response.text();
+
+      // Parse out the "## Co-signatories" section
+      const lines = text.split('\n');
+      let inSection = false;
+      const signatures = [];
+      for (const line of lines) {
+        if (line.match(/^##\s+Co-signatories/i)) { inSection = true; continue; }
+        if (inSection && line.match(/^##\s/)) break; // next section
+        if (inSection && line.startsWith('- ')) {
+          signatures.push(line.replace(/^- /, ''));
+        }
+      }
+
+      const ul = document.getElementById('signatories-ul');
+      const loading = document.getElementById('sig-list-loading');
+      if (signatures.length === 0) {
+        loading.textContent = 'No signatories yet. Be the first.';
+      } else {
+        ul.innerHTML = signatures.map(s => `<li>${s.replace(/</g, '&lt;')}</li>`).join('');
+        ul.style.display = 'block';
+        loading.style.display = 'none';
+      }
+    } catch (e) {
+      document.getElementById('sig-list-loading').textContent = 'Could not load live signatories. See the canonical signatories.md at the GitHub repository.';
+    }
+  }
+  loadSignatories();
+})();
+</script>
+
+</body>
+</html>

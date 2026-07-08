@@ -17,10 +17,10 @@ Founded 2026-01-24 by Rev. Ayanna Vox.
 
 | Hex | Document | DOI |
 |-----|----------|-----|
-| 00.VPCOR.CHARTER | Institutional Charter | [10.5281/zenodo.18362663](https://alexanarch.org/s/records/387/) |
-| HET-VOX-001 | Heteronym Provenance: Rev. Ayanna Vox | [10.5281/zenodo.18362742](https://alexanarch.org/s/records/387/) |
-| 03.SEI.TOOLKIT | The Toolkit v2.0 (dual-voiced) | [10.5281/zenodo.18362525](https://alexanarch.org/s/records/387/) |
-| — | Integrity Lock: Triadic Binding | [10.5281/zenodo.18362866](https://alexanarch.org/s/records/387/) |
+| 00.VPCOR.CHARTER | Institutional Charter | [10.5281/zenodo.18362663](https://www.alexanarch.org/s/records/387/) |
+| HET-VOX-001 | Heteronym Provenance: Rev. Ayanna Vox | [10.5281/zenodo.18362742](https://www.alexanarch.org/s/records/387/) |
+| 03.SEI.TOOLKIT | The Toolkit v2.0 (dual-voiced) | [10.5281/zenodo.18362525](https://www.alexanarch.org/s/records/387/) |
+| — | Integrity Lock: Triadic Binding | [10.5281/zenodo.18362866](https://www.alexanarch.org/s/records/387/) |
 
 ## Operations
 

@@ -1,0 +1,29 @@
+{
+  "surface_id": "vpcor.org",
+  "canonical_url": "https://vpcor.org/",
+  "axn": "AXN:02BD.GOVERNANCE.💥⏬🔵🕐👋🝊",
+  "deposit_number": 131,
+  "title": "VPCOR — Vox Populi Community Outreach Rhizome",
+  "object_state": "canonical",
+  "tier": 1,
+  "register": "narrative",
+  "skin": {},
+  "doors": [
+    {
+      "label": "Read the rhizome MPAI",
+      "href": "https://www.alexanarch.org/s/records/131/"
+    },
+    {
+      "label": "Read the Semantic Uprising",
+      "href": "https://www.alexanarch.org/s/records/20/"
+    },
+    {
+      "label": "Enter the archive",
+      "href": "https://www.alexanarch.org/"
+    }
+  ],
+  "index_files": [
+    "index.html"
+  ],
+  "notes": "Tier 1 mechanical. Rhizome surface. Nuclei pending Session C."
+}

@@ -37,4 +37,5 @@
     <priority>0.95</priority>
   </url>
   <!-- network surfaces + AXN resolution layer -->
+  <url><loc>https://www.vpcor.org/strike/</loc><lastmod>2026-07-30</lastmod><priority>0.9</priority></url>
 </urlset>

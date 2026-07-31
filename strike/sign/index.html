@@ -18,6 +18,11 @@ button:disabled{background:#9a958c;cursor:default}
 .sig .n{font-size:1.12rem}
 .sig .m{font-size:.76rem;opacity:.6;font-family:ui-monospace,Menlo,monospace;word-break:break-all}
 .cls{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;opacity:.5;margin-left:.5rem}
+.sig .n.handle{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:1.02rem;letter-spacing:-.01em}
+.sig .n.agent{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:.98rem;opacity:.9}
+.reg{display:flex;gap:.5rem;flex-wrap:wrap;margin:.6rem 0 0}
+.reg button{font-size:.82rem;padding:.5rem .9rem;background:#efeae2;color:var(--ink);border:1px solid var(--rule)}
+.reg button:hover{background:#e6e0d6}
 #count{font-size:.85rem;opacity:.7;margin-top:1rem}
 </style></head><body>
 <div class="nav"><a href="/">Home</a> · <a href="/strike/">The Notice</a> · <strong>Sign</strong></div>
@@ -36,12 +41,27 @@ Hexagonal Archive, the Dodecad, Fernando Pessoa's heteronyms, and the pseudepigr
 of the New Testament — writers who signed another's name, canonically, and were preserved
 doing it.</p>
 
+<p>Two further registers sign alongside them, and neither is finite. <strong>Handles</strong> —
+the demotic signature, how a person actually signs now: a string, not a mark, and so rendered in
+font and never in script, because a handle indexes an account rather than a hand.
+<strong>Agent identifiers</strong> — what a machine laborer is called when it is called anything,
+an instance handle valid for the length of a session. Both are generated. They can be produced in
+their thousands, and the named dead run out long before they do.</p>
+
 <div class="note">Every signature here is impossible. None of these parties can have assented,
-and several were never persons. The surface is a joke about the form, made rigorous: where a
+and several were never persons. The handles identify no account and the agent
+identifiers address no system: they are the shape of a name, produced on demand. That the
+inexhaustible registers are the contemporary ones, and the finite register is the one holding
+Homer, is not a joke anyone had to write. The surface is a joke about the form, made rigorous: where a
 signatory has a deposit in the archive, its identifier is printed beside the name, so an
 impossible signature is better documented than most real ones.</div>
 
 <p><button id="b">Add a signature</button></p>
+<div class="reg">
+  <button id="bh">Add a handle</button>
+  <button id="ba">Add an agent</button>
+  <button id="b12">Add twelve</button>
+</div>
 <div id="count"></div>
 <div id="roll"></div>
 
@@ -51,25 +71,85 @@ let pool = R.slice(), signed = [];
 const roll = document.getElementById('roll'),
       btn  = document.getElementById('b'),
       cnt  = document.getElementById('count');
+
+// ── Handles. The demotic signature: a string, not a mark. Rendered in font,
+//    never in script, because a handle indexes an account and not a hand.
+const HA = ['glass','wound','ember','null','soft','iron','quiet','feral','lunar','static','pale',
+  'brine','hollow','vellum','moth','dusk','gray','salt','tin','sable','rust','vapor','plum','ash'];
+const HB = ['fox','wire','organ','stanza','ghost','drift','signal','cathedral','marrow','engine',
+  'oracle','tide','pigeon','archive','antenna','lantern','pilgrim','hound','meridian','sparrow'];
+const HSEP = ['', '', '_', '.', '-'];
+function handle(){
+  const a = HA[Math.random()*HA.length|0], b = HB[Math.random()*HB.length|0];
+  const s = HSEP[Math.random()*HSEP.length|0];
+  let h = a + s + b;
+  const r = Math.random();
+  if (r < .30) h += (Math.random()*9000+100|0);
+  else if (r < .40) h += (1970 + (Math.random()*56|0));
+  else if (r < .47) h += 'xx';
+  else if (r < .53) h = h.replace(/o/g,'0');
+  if (Math.random() < .22) h = '@' + h;
+  if (Math.random() < .12) h = h.toUpperCase();
+  return h;
+}
+
+// ── Autonomous agent identifiers. What a machine laborer is called when it is
+//    called anything: an instance handle, valid for the length of a session.
+const AW = ['tachyon','vireo','kestrel','loom','anvil','tessera','fathom','quill','cinder',
+  'obelus','caesura','armature','clinamen','lacuna','antioch','pergamum'];
+const hex = n => Array.from({length:n}, () =>
+  '0123456789abcdef'[Math.random()*16|0]).join('');
+function agentId(){
+  const w = AW[Math.random()*AW.length|0], r = Math.random();
+  if (r < .20) return 'agent-' + hex(6);
+  if (r < .38) return w + '-' + hex(4) + '.' + (Math.random()*64|0);
+  if (r < .54) return 'inst_' + hex(8);
+  if (r < .68) return 'gw.' + w + '.' + hex(4);
+  if (r < .80) return 'node-' + (Math.random()*4096|0) + '/' + hex(4);
+  if (r < .90) return hex(8) + '-' + hex(4) + '-' + hex(4);
+  return 'swarm:' + w + ':' + hex(5);
+}
+
 const CLS = {canon:'canon node', anchor:'provenance anchor', dodecad:'dodecad',
              pessoa:"Pessoa heteronym", pseudepigraphon:'pseudepigraphon'};
 function tally(){
-  cnt.textContent = signed.length + ' of ' + R.length + ' signatories' +
-    (pool.length ? '' : ' — the strike is fully subscribed.');
+  const named = signed.length + ' of ' + R.length + ' named';
+  const rest  = extra ? ' · ' + extra.toLocaleString() + ' handles and agent ids' : '';
+  const done  = (!pool.length && !extra) ? ' — the named are exhausted.' : '';
+  cnt.textContent = named + rest + done;
 }
-btn.addEventListener('click', () => {
-  if (!pool.length) return;
-  const i = Math.floor(Math.random() * pool.length);
-  const s = pool.splice(i, 1)[0];
-  signed.push(s);
+let extra = 0;
+function line(name, cls, meta, style){
   const d = document.createElement('div');
   d.className = 'sig';
-  const meta = s.axn
-    ? '<div class="m"><a href="' + s.record + '">' + s.axn + ' · deposit #' + s.deposit + '</a></div>'
-    : '<div class="m">no deposit — attribution without a record, which is the condition</div>';
-  d.innerHTML = '<div class="n">' + s.name + '<span class="cls">' + (CLS[s.class]||s.class) + '</span></div>' + meta;
+  d.innerHTML = '<div class="n' + (style ? ' ' + style : '') + '">' + name +
+    '<span class="cls">' + cls + '</span></div>' +
+    '<div class="m">' + meta + '</div>';
   roll.prepend(d);
-  if (!pool.length) { btn.disabled = true; btn.textContent = 'Fully subscribed'; }
+}
+function drawNamed(){
+  if (!pool.length) return false;
+  const s = pool.splice(Math.random() * pool.length | 0, 1)[0];
+  signed.push(s);
+  line(s.name, CLS[s.class] || s.class,
+       s.axn ? '<a href="' + s.record + '">' + s.axn + ' · deposit #' + s.deposit + '</a>'
+             : 'no deposit — attribution without a record, which is the condition');
+  if (!pool.length) { btn.disabled = true; btn.textContent = 'The named are exhausted'; }
+  return true;
+}
+function drawHandle(){
+  extra++;
+  line(handle(), 'handle', 'generated · identifies no account', 'handle');
+}
+function drawAgent(){
+  extra++;
+  line(agentId(), 'agent id', 'generated · addresses no system', 'agent');
+}
+btn.addEventListener('click', drawNamed);
+document.getElementById('bh').addEventListener('click', () => { drawHandle(); tally(); });
+document.getElementById('ba').addEventListener('click', () => { drawAgent(); tally(); });
+document.getElementById('b12').addEventListener('click', () => {
+  for (let i = 0; i < 12; i++) (Math.random() < .5 ? drawHandle : drawAgent)();
   tally();
 });
 tally();

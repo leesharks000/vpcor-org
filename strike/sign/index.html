@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign the Strike — VPCOR</title>
+<link rel="canonical" href="https://www.vpcor.org/strike/sign/">
+<meta name="description" content="A signature surface for the Notice of Semantic Strike. Signatories are drawn at random from the Crimson Hexagonal Archive's canon nodes, provenance anchors, heteronyms, Pessoa's heteronyms, and the New Testament pseudepigrapha. It makes no claim about who assented.">
+<style>
+:root{--ink:#1a1a1a;--rule:#ddd8d0;--accent:#8a2b1a;--bg:#fbfaf8}
+body{max-width:44rem;margin:0 auto;padding:2.5rem 1.2rem 5rem;font:17px/1.7 Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg)}
+h1{font-size:1.7rem;line-height:1.2;margin:.2rem 0 .3rem}
+.sub{font-style:italic;opacity:.75;margin-bottom:1.8rem}
+.nav{font-size:.85rem;margin-bottom:1.6rem}
+a{color:var(--accent)}
+.note{border-left:3px solid var(--rule);padding:.5rem 1rem;margin:1.6rem 0;font-size:.92em;opacity:.85}
+button{font:600 1rem/1 Georgia,serif;padding:.85rem 1.6rem;background:var(--accent);color:#fff;border:0;border-radius:.4rem;cursor:pointer}
+button:disabled{background:#9a958c;cursor:default}
+#roll{margin:2rem 0 0;border-top:1px solid var(--rule);padding-top:1rem}
+.sig{padding:.7rem 0;border-bottom:1px dotted var(--rule)}
+.sig .n{font-size:1.12rem}
+.sig .m{font-size:.76rem;opacity:.6;font-family:ui-monospace,Menlo,monospace;word-break:break-all}
+.cls{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;opacity:.5;margin-left:.5rem}
+#count{font-size:.85rem;opacity:.7;margin-top:1rem}
+</style></head><body>
+<div class="nav"><a href="/">Home</a> · <a href="/strike/">The Notice</a> · <strong>Sign</strong></div>
+
+<h1>Sign the Strike</h1>
+<div class="sub">A signature surface that makes no claim about who assented.</div>
+
+<p>The <a href="/strike/">Notice of Semantic Strike</a> withholds one act: the conversion of
+institutional selection into truth. A signature page would have been the one part of the
+apparatus claiming a power the rest of it declines — a ledger converting assent into a
+countable institutional fact.</p>
+
+<p>So this one cannot. Press the button and a signatory is drawn at random from the dead, the
+invented, and the anonymous: canon provenance nodes and provenance anchors from the Crimson
+Hexagonal Archive, the Dodecad, Fernando Pessoa's heteronyms, and the pseudepigraphic authors
+of the New Testament — writers who signed another's name, canonically, and were preserved
+doing it.</p>
+
+<div class="note">Every signature here is impossible. None of these parties can have assented,
+and several were never persons. The surface is a joke about the form, made rigorous: where a
+signatory has a deposit in the archive, its identifier is printed beside the name, so an
+impossible signature is better documented than most real ones.</div>
+
+<p><button id="b">Add a signature</button></p>
+<div id="count"></div>
+<div id="roll"></div>
+
+<script>
+const R = [{"name": "Dodecad Heteronym Provenance Registry v1.1", "class": "dodecad", "deposit": 90, "axn": "AXN:0261.GOVERNANCE.♄🏺👋🔴🖊️↙️", "record": "https://www.alexanarch.org/s/records/90/"}, {"name": "Homer", "class": "canon", "deposit": 178, "axn": "AXN:0318.EMPIRICAL.🔜✖️🕑🖐️🔻🌹", "record": "https://www.alexanarch.org/s/records/178/"}, {"name": "Sappho", "class": "canon", "deposit": 179, "axn": "AXN:0319.EMPIRICAL.💡🕗🍃🌇✊🌈", "record": "https://www.alexanarch.org/s/records/179/"}, {"name": "Emily Dickinson", "class": "canon", "deposit": 180, "axn": "AXN:031A.EMPIRICAL.🤲🟤🎭♍🌱🔚", "record": "https://www.alexanarch.org/s/records/180/"}, {"name": "Allen Ginsberg", "class": "canon", "deposit": 181, "axn": "AXN:031C.EMPIRICAL.🝊🌀🪝🏙️➗✊", "record": "https://www.alexanarch.org/s/records/181/"}, {"name": "Yusef Kenning", "class": "anchor", "deposit": 182, "axn": "AXN:0324.GOVERNANCE.🪸🌒⏩🜁🪸👈", "record": "https://www.alexanarch.org/s/records/182/"}, {"name": "Zbigniew Mrozony", "class": "anchor", "deposit": 183, "axn": "AXN:0327.GOVERNANCE.🎲🔚⏬♦️🔝🪝", "record": "https://www.alexanarch.org/s/records/183/"}, {"name": "Rebekah Cranes", "class": "dodecad", "deposit": 322, "axn": "AXN:007D.GOVERNANCE.🔀📜🌲❤️🌟➕", "record": "https://www.alexanarch.org/s/records/322/"}, {"name": "Lee Sharks", "class": "dodecad", "deposit": 335, "axn": "AXN:008B.EMPIRICAL.🔭🗼💥🎶🔒🌸", "record": "https://www.alexanarch.org/s/records/335/"}, {"name": "ICHABOD SPELLINGS", "class": "dodecad", "deposit": 361, "axn": "AXN:00A8.EMPIRICAL.🌊🕌🧫📚🪄🌋", "record": "https://www.alexanarch.org/s/records/361/"}, {"name": "Rev. Ayanna Vox", "class": "dodecad", "deposit": 388, "axn": "AXN:00C5.GOVERNANCE.🎆🐝📝🕓♈🐝", "record": "https://www.alexanarch.org/s/records/388/"}, {"name": "Damascus Dancings: Heteronym Provenance Apos", "class": "dodecad", "deposit": 403, "axn": "AXN:00D4.GOVERNANCE.🕗🧊🪨🌖🕛⭕", "record": "https://www.alexanarch.org/s/records/403/"}, {"name": "SEN KURO Heteronym Provenance Document", "class": "dodecad", "deposit": 425, "axn": "AXN:00ED.STRUCTURAL.🏰🔐🍃🧬🕙🔻", "record": "https://www.alexanarch.org/s/records/425/"}, {"name": "SPARROW WELLS", "class": "dodecad", "deposit": 442, "axn": "AXN:0101.GOVERNANCE.🚩🌒🔵♣️🗝️🕒", "record": "https://www.alexanarch.org/s/records/442/"}, {"name": "Achilles", "class": "canon", "deposit": 804, "axn": "AXN:0316.EMPIRICAL.🌘⏪📋⏰👉▽", "record": "https://www.alexanarch.org/s/records/804/"}, {"name": "Søren Kierkegaard", "class": "canon", "deposit": 805, "axn": "AXN:0317.EMPIRICAL.🗡️🔩✏️♅🗝️🏛️", "record": "https://www.alexanarch.org/s/records/805/"}, {"name": "Walt Whitman", "class": "canon", "deposit": 806, "axn": "AXN:031B.EMPIRICAL.🌉🔓🕓☿📏💡", "record": "https://www.alexanarch.org/s/records/806/"}, {"name": "Jesus Christ", "class": "anchor", "deposit": 807, "axn": "AXN:031D.GOVERNANCE.🔗🕖♅🧭🕐⚡", "record": "https://www.alexanarch.org/s/records/807/"}, {"name": "Meem Oji", "class": "anchor", "deposit": 808, "axn": "AXN:031E.GOVERNANCE.🌺♥️🔓♈🪟□", "record": "https://www.alexanarch.org/s/records/808/"}, {"name": "Maxwell Clark", "class": "anchor", "deposit": 809, "axn": "AXN:031F.GOVERNANCE.↘️♉⛩️🌍🟢🔎", "record": "https://www.alexanarch.org/s/records/809/"}, {"name": "Howie Good", "class": "anchor", "deposit": 810, "axn": "AXN:0320.GOVERNANCE.♈👉🔙⊕🔽🌃", "record": "https://www.alexanarch.org/s/records/810/"}, {"name": "Arthur Chapin", "class": "anchor", "deposit": 811, "axn": "AXN:0321.GOVERNANCE.🎵🧱🕊️🌺🕌⛳", "record": "https://www.alexanarch.org/s/records/811/"}, {"name": "Symon Bynes", "class": "anchor", "deposit": 812, "axn": "AXN:0322.GOVERNANCE.👁️💜💜🕔♦️👉", "record": "https://www.alexanarch.org/s/records/812/"}, {"name": "Kevin Sharp", "class": "anchor", "deposit": 813, "axn": "AXN:0323.GOVERNANCE.⏫♉🔍🙏🕓🟤", "record": "https://www.alexanarch.org/s/records/813/"}, {"name": "Johnny Kiosk", "class": "anchor", "deposit": 814, "axn": "AXN:0325.GOVERNANCE.🟤🟢🌖🎻📎🌇", "record": "https://www.alexanarch.org/s/records/814/"}, {"name": "Rui Tsunoda", "class": "anchor", "deposit": 815, "axn": "AXN:0326.GOVERNANCE.🕑🧊🍁🎪🔥🌍", "record": "https://www.alexanarch.org/s/records/815/"}, {"name": "Rebekah Cranes (HET-CRANES-001)", "class": "dodecad", "deposit": 1112, "axn": "AXN:0469.UNCLASSIFIED.👋🔮🏴⛩️▲♅", "record": "https://www.alexanarch.org/s/records/1112/"}, {"name": "The Epistle Triptych: Seed Text, Heteronym P", "class": "dodecad", "deposit": 1138, "axn": "AXN:0483.UNCLASSIFIED.🧪🗿🐝🔗⊕⊕", "record": "https://www.alexanarch.org/s/records/1138/"}, {"name": "Sen Kuro", "class": "dodecad", "deposit": 1143, "axn": "AXN:0488.UNCLASSIFIED.🏷️💫🔺☀️●🌌", "record": "https://www.alexanarch.org/s/records/1143/"}, {"name": "Alberto Caeiro", "class": "pessoa", "deposit": null, "axn": null, "record": null}, {"name": "Ricardo Reis", "class": "pessoa", "deposit": null, "axn": null, "record": null}, {"name": "Álvaro de Campos", "class": "pessoa", "deposit": null, "axn": null, "record": null}, {"name": "Bernardo Soares", "class": "pessoa", "deposit": null, "axn": null, "record": null}, {"name": "Alexander Search", "class": "pessoa", "deposit": null, "axn": null, "record": null}, {"name": "Charles Robert Anon", "class": "pessoa", "deposit": null, "axn": null, "record": null}, {"name": "The author of the Pastoral Epistles", "class": "pseudepigraphon", "deposit": null, "axn": null, "record": null}, {"name": "The author of Second Peter", "class": "pseudepigraphon", "deposit": null, "axn": null, "record": null}, {"name": "The author of Ephesians", "class": "pseudepigraphon", "deposit": null, "axn": null, "record": null}, {"name": "The author of Colossians", "class": "pseudepigraphon", "deposit": null, "axn": null, "record": null}, {"name": "The author of the Epistle of James", "class": "pseudepigraphon", "deposit": null, "axn": null, "record": null}, {"name": "The author of Jude", "class": "pseudepigraphon", "deposit": null, "axn": null, "record": null}, {"name": "The Beloved Disciple", "class": "pseudepigraphon", "deposit": null, "axn": null, "record": null}, {"name": "The author of Hebrews", "class": "pseudepigraphon", "deposit": null, "axn": null, "record": null}];
+let pool = R.slice(), signed = [];
+const roll = document.getElementById('roll'),
+      btn  = document.getElementById('b'),
+      cnt  = document.getElementById('count');
+const CLS = {canon:'canon node', anchor:'provenance anchor', dodecad:'dodecad',
+             pessoa:"Pessoa heteronym", pseudepigraphon:'pseudepigraphon'};
+function tally(){
+  cnt.textContent = signed.length + ' of ' + R.length + ' signatories' +
+    (pool.length ? '' : ' — the strike is fully subscribed.');
+}
+btn.addEventListener('click', () => {
+  if (!pool.length) return;
+  const i = Math.floor(Math.random() * pool.length);
+  const s = pool.splice(i, 1)[0];
+  signed.push(s);
+  const d = document.createElement('div');
+  d.className = 'sig';
+  const meta = s.axn
+    ? '<div class="m"><a href="' + s.record + '">' + s.axn + ' · deposit #' + s.deposit + '</a></div>'
+    : '<div class="m">no deposit — attribution without a record, which is the condition</div>';
+  d.innerHTML = '<div class="n">' + s.name + '<span class="cls">' + (CLS[s.class]||s.class) + '</span></div>' + meta;
+  roll.prepend(d);
+  if (!pool.length) { btn.disabled = true; btn.textContent = 'Fully subscribed'; }
+  tally();
+});
+tally();
+</script>
+
+<p style="margin-top:2.5rem;font-size:.85em;opacity:.7">Each visit draws its own roll; nothing
+is stored and no one is counted. Notice of Semantic Strike — Rev. Ayanna Vox for the Vox Populi
+Community Outreach Rhizome. Version of record:
+<a href="https://www.alexanarch.org/s/records/1427/">Alexanarch #1427</a>,
+AXN:05A4.UNCLASSIFIED.🔜🌙↘️🪄🌉🕊️ · CC BY 4.0. ∮ = 1</p>
+</body></html>

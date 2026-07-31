@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Petitions — Notice of Semantic Strike | VPCOR</title>
+<link rel="canonical" href="https://www.vpcor.org/strike/petitions/">
+<meta name="description" content="Closed petitions to the Notice of Semantic Strike. Each is one signing session, carrying an AXN, signed by the dead, the invented, and the generated. Every signatory is impossible; what is recorded is a performance of the form.">
+<style>
+:root{--ink:#1a1a1a;--rule:#ddd8d0;--accent:#8a2b1a;--bg:#fbfaf8}
+body{max-width:46rem;margin:0 auto;padding:2.5rem 1.2rem 5rem;font:17px/1.7 Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg)}
+h1{font-size:1.7rem;line-height:1.2;margin:.2rem 0 .3rem}
+h2{font-size:1.1rem;margin:2rem 0 .5rem;border-bottom:1px solid var(--rule);padding-bottom:.2rem}
+.sub{font-style:italic;opacity:.75;margin-bottom:1.6rem}
+.nav{font-size:.85rem;margin-bottom:1.6rem}
+a{color:var(--accent)}
+.tot{border-left:3px solid var(--rule);padding:.6rem 1rem;margin:1.4rem 0;font-size:.95em}
+.row{padding:.7rem 0;border-bottom:1px dotted var(--rule);display:flex;gap:.8rem;align-items:baseline;flex-wrap:wrap}
+.ax{font-family:ui-monospace,Menlo,monospace;font-size:.82rem;flex:1 1 16rem;word-break:break-all}
+.ct{font-size:.85rem;opacity:.75;white-space:nowrap}
+.pre{font-style:italic;margin:1rem 0 1.4rem}
+ol.ref{font-size:.94em} ol.ref li{margin:.35rem 0}
+.sig{font-family:ui-monospace,Menlo,monospace;font-size:.84rem;padding:.28rem 0;border-bottom:1px dotted var(--rule)}
+.sig .c{opacity:.5;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin-left:.5rem}
+.named{font-family:Georgia,serif;font-size:.98rem}
+</style></head><body>
+<div class="nav"><a href="/">Home</a> · <a href="/strike/">The Notice</a> · <a href="/strike/sign/">Sign</a> · <strong>Petitions</strong></div>
+<div id="v"><h1>Petitions</h1><div class="sub">Loading…</div></div>
+<script>
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const CLS = {canon:'canon node',anchor:'provenance anchor',dodecad:'dodecad',pessoa:'Pessoa heteronym',pseudepigraphon:'pseudepigraphon',handle:'handle',agent:'agent id'};
+const GEN = new Set(['handle','agent']);
+const v = document.getElementById('v');
+const hex = new URLSearchParams(location.search).get('axn');
+
+function one(p){
+  const sigs = p.signatories.map(s =>
+    '<div class="sig' + (GEN.has(s.class) ? '' : ' named') + '">' + esc(s.name) +
+    '<span class="c">' + (CLS[s.class]||s.class) + '</span></div>').join('');
+  const refs = p.refusals.map(r => '<li>' + esc(r) + '</li>').join('');
+  v.innerHTML = '<h1>Petition</h1>' +
+    '<div class="sub">' + esc(p.axn) + '</div>' +
+    '<div class="tot">Closed ' + esc(p.closed_at.slice(0,10)) + ' · <strong>' +
+      p.signature_count + '</strong> signatories — ' + p.named_count + ' named, ' +
+      p.generated_count + ' generated. Witness: ' + esc(p.witness) + '.</div>' +
+    '<p class="pre">' + esc(p.preamble) + '</p>' +
+    '<h2>The refusals</h2><ol class="ref">' + refs + '</ol>' +
+    '<p style="font-size:.85em;opacity:.7">' + esc(p.refusals_source) + '</p>' +
+    '<h2>The undersigned</h2>' + sigs +
+    '<p style="margin-top:2rem;font-size:.85em;opacity:.7">' + esc(p.note) +
+    '</p><p style="font-size:.9em"><a href="/strike/petitions/">All petitions</a> · ' +
+    '<a href="/strike/sign/">Open a new one</a></p>';
+}
+
+function list(d){
+  const rows = (d.petitions||[]).map(p =>
+    '<div class="row"><span class="ax"><a href="?axn=' + esc(p.hex) + '">' + esc(p.axn) + '</a></span>' +
+    '<span class="ct">' + p.signature_count + ' signatories · ' + p.named_count + ' named · ' +
+    esc(String(p.closed_at).slice(0,10)) + '</span></div>').join('');
+  v.innerHTML = '<h1>Petitions</h1>' +
+    '<div class="sub">Closed sessions of the signature surface. Every signatory is impossible.</div>' +
+    '<div class="tot"><strong>' + (d.total_petitions||0).toLocaleString() + '</strong> petitions closed · <strong>' +
+      (d.total_signatures||0).toLocaleString() + '</strong> signatures performed, all sessions.</div>' +
+    '<p>Each petition is one signing session: the preamble, the strike\u2019s refusals verbatim, and that ' +
+    'session\u2019s signatories. Each carries an AXN under the PETITION family and does not enter the ' +
+    'Alexanarch deposit registry \u2014 the convention the Book tab keeps for auto-appended sessions. ' +
+    'Within a petition the named subscribe once each; across petitions the canon is unbounded.</p>' +
+    (rows || '<p style="opacity:.7">No petitions closed yet. <a href="/strike/sign/">Open the first.</a></p>') +
+    '<p style="margin-top:2rem;font-size:.9em"><a href="/strike/sign/">Open a petition</a> · <a href="/strike/">The Notice</a></p>';
+}
+
+fetch('/api/sign' + (hex ? '?axn=' + encodeURIComponent(hex) : ''))
+  .then(r => r.json())
+  .then(d => {
+    if (d && d.ok === false) {
+      v.innerHTML = '<h1>Petitions</h1><div class="sub">Not yet keeping records.</div>' +
+        '<p>' + esc(d.note) + ' Signatures may still be performed at ' +
+        '<a href="/strike/sign/">the signature surface</a>; sessions will close into petitions ' +
+        'once the store is connected.</p>';
+    } else if (hex) one(d); else list(d);
+  })
+  .catch(() => { v.innerHTML = '<h1>Petitions</h1><p>The petition store is unreachable.</p>'; });
+</script>
+</body></html>

@@ -1,0 +1,46 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   VPCOR.ORG — TYPE LAYER
+
+   The site declared 'Cormorant Garamond' and 'DM Sans' with NO @font-face, and
+   a stray 'Source Serif 4' besides. None is a system font, so ten pages
+   rendered in fallbacks on nearly every machine — Cormorant falling back to
+   Georgia is most of what reads as crufty here. Sixth fleet site, same defect.
+
+   Plex Serif stands in for Cormorant: it is already self-hosted across the
+   fleet, and a served face beats an unserved one. If Cormorant is wanted, the
+   woff2 goes in /assets/fonts/ and --body changes here alone.
+
+   NO COLOUR IS DECLARED. The terracotta, amber and oxblood on warm dark are
+   this site's own and are good; only the faces are the fleet's.
+   ══════════════════════════════════════════════════════════════════════════ */
+@font-face{font-family:'IBM Plex Serif';src:url('/assets/fonts/IBMPlexSerif-400.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'IBM Plex Serif';src:url('/assets/fonts/IBMPlexSerif-400i.woff2')format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'IBM Plex Sans';src:url('/assets/fonts/IBMPlexSans-400.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'IBM Plex Mono';src:url('/assets/fonts/IBMPlexMono-400.woff2')format('woff2');font-weight:400;font-display:swap}
+:root{
+  --body:'IBM Plex Serif',Georgia,'Times New Roman',serif;
+  --system:'IBM Plex Sans',ui-sans-serif,system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  --msp-mono:var(--mono);
+  --fs-micro:10px;--fs-fine:11.5px;--fs-small:13px;--fs-body:17px;--fs-lead:19px;
+  --fs-h3:21px;--fs-h2:27px;--tr-wide:.16em;
+}
+body{font-family:var(--body);font-size:var(--fs-body);line-height:1.62;
+-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+code,kbd,samp,pre{font-family:var(--mono)}
+
+/* one navigation, every page. nav.top and div.nav had DIFFERENT link sets —
+   the strike pages were missing Strike itself and the external links, and the
+   other seven were missing Sign. */
+.vpnav{display:flex;flex-wrap:wrap;align-items:baseline;gap:0;
+font-family:var(--system);font-size:12px;letter-spacing:.06em;
+border-bottom:1px solid var(--rule,rgba(212,152,73,.22));
+margin:0 0 1.6rem;padding:12px 0 10px}
+.vpnav a{color:var(--paper-dim,#d8c9af);text-decoration:none;padding:3px 11px;
+border-left:1px solid var(--rule,rgba(212,152,73,.22))}
+.vpnav a:first-child{border-left:0;padding-left:0}
+.vpnav a:hover{color:var(--amber-soft,#e8b876)}
+.vpnav a.current{color:var(--terracotta,#c66544)}
+.vpnav .out{margin-left:auto;font-size:11px;color:var(--paper-dim,#d8c9af);opacity:.72}
+@media(max-width:640px){.vpnav{font-size:11px}.vpnav a{padding:3px 7px}
+.vpnav .out{margin-left:0;width:100%;padding-top:6px}}

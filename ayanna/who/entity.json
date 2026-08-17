@@ -26,9 +26,7 @@
    "surface": "vpcor.org"
   },
   "mantle": {
-   "name": "The Diplomat",
-   "inMantleTable": 549,
-   "bearingCost": "She bears the stress she diverts."
+   "name": "The Diplomat"
   },
   "rooms": [],
   "roomNote": "Anchors no room. Not named in the Assembly Room anchor (10.ROOM.ASSEMBLY), which is held by the Assembly Chorus. Same shape as Fraction and the Ruby Moot.",
@@ -37,6 +35,52 @@
    "id": "EA-SPXI-HETERONYM-01",
    "version": "v0.2",
    "record": 1446
+  },
+  "editorships": {
+   "duoviri": [
+    "Provenance: Journal of Forensic Semiotics"
+   ],
+   "board": [
+    "Transactions of the Semantic Economy Institute"
+   ],
+   "_rule": "A duovirate is the office, held jointly. A board seat is not the office. The card keeps them apart."
+  },
+  "semanticIntegrityMarkers": {
+   "_note": "Performative rather than descriptive — they do something by being said.",
+   "markers": [
+    {
+     "deposit": 87,
+     "text": "∮ = 1, this book is enacted."
+    },
+    {
+     "deposit": 58,
+     "text": "∮ = 1 (armed).",
+     "gloss": "under strike conditions the seal is a trigger"
+    },
+    {
+     "deposit": 160,
+     "text": "∮ = 1 − PER"
+    }
+   ]
+  },
+  "surfaceHistory": {
+   "_rule": "A surface is a place a reader could find the work. A DEPOSIT IS NOT A SURFACE — it is the archive holding it, which is the opposite. Rows citing deposits were removed.",
+   "_invented": "Where no pre-archival surface is recoverable it is RECONSTRUCTED and marked as such, in-universe. An archive that invents a provenance and does not say so is doing the thing it was built against.",
+   "rows": [
+    {
+     "when": "before 2026",
+     "what": "the convening years",
+     "host": "no surviving index",
+     "attestation": "reconstructed",
+     "note": "Sermonic, second person, spoken to a room that is present. A voice that convenes leaves minutes, not archives, and no minutes have been recovered."
+    }
+   ]
+  },
+  "recordSurfaces": {
+   "card": "https://vpcor.org/ayanna/who/",
+   "where": "https://vpcor.org/where/",
+   "heteronymRecord": "https://www.alexanarch.org/datasets/heteronyms/records/ayanna-vox.json",
+   "_note": "The dataset record is the authority; these pages are mirrors and say so."
   }
  },
  "schema_org": {
@@ -44,7 +88,7 @@
   "@type": "ProfilePage",
   "@id": "https://vpcor.org/ayanna/who/#page",
   "dateCreated": "2026-01-26",
-  "dateModified": "2026-08-10",
+  "dateModified": "2026-08-17",
   "mainEntity": {
    "@type": "Person",
    "@id": "https://vpcor.org/ayanna/who/#vox",
@@ -64,5 +108,10 @@
     }
    ]
   }
+ },
+ "_updated": {
+  "date": "2026-08-17",
+  "pass": "nine-step card pass",
+  "_note": "The entity object is what a machine fetches instead of parsing the page. It had gone stale against its own card: mantles, editorships and markers were all on the surface and not in the object."
  }
 }

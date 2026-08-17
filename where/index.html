@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Where &middot; Provenance: Journal of Forensic Semiotics | VPCOR</title>
+<meta name="description" content="Provenance: Journal of Forensic Semiotics — Rev. Ayanna Vox holds the editorship jointly with Dr. Orin Trace. Charter, board and the inaugural issue.">
+<link rel="canonical" href="https://vpcor.org/where/">
+<link rel="stylesheet" href="/assets/type.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap');
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #1a0e0a;
+      --paper: #f4ebdb;
+      --paper-dim: #d8c9af;
+      --terracotta: #c66544;
+      --terracotta-dim: #8f4530;
+      --amber: #d49849;
+      --amber-soft: #e8b876;
+      --rule: rgba(212, 152, 73, 0.22);
+      --body: 'Cormorant Garamond', Georgia, serif;
+      --system: 'DM Sans', system-ui, sans-serif;
+    }
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse at top, rgba(212, 152, 73, 0.05) 0%, transparent 60%);
+      color: var(--paper);
+      font-family: var(--body);
+      font-size: 1.28rem;
+      line-height: 1.7;
+    }
+    .container { max-width: 44rem; margin: 0 auto; padding: 3rem 1.6rem 6rem; }
+/* the nav already carries its own bottom rule and spacing; a further 3rem above
+   the hero opened a gap no other card has */
+.vpnav + .container, body > .container:first-of-type { padding-top: .6rem; }
+.hero { margin-top: .4rem; }
+    nav.top {
+      font-family: var(--system); font-size: 0.78rem; font-weight: 500;
+      margin-bottom: 3.5rem; padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--rule); letter-spacing: 0.04em;
+    }
+    nav.top a {
+      color: var(--amber); text-decoration: none; margin-right: 1.5rem;
+      opacity: 0.7; transition: opacity 0.2s;
+    }
+    nav.top a:hover { opacity: 1; }
+    nav.top a.current { opacity: 1; color: var(--amber-soft); }
+
+    .hero { text-align: center; margin: 1rem 0 3rem; }
+    .seal {
+      font-family: var(--system); color: var(--amber);
+      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+      margin-bottom: 1rem; opacity: 0.8; font-weight: 500;
+    }
+    h1 {
+      font-family: var(--body); font-weight: 600; font-style: italic;
+      font-size: 2.8rem; color: var(--terracotta); line-height: 1.1;
+    }
+    .subtitle {
+      font-style: italic; color: var(--paper-dim);
+      font-size: 1.25rem; margin-top: 0.6rem;
+    }
+
+    h2 {
+      font-family: var(--body); font-weight: 600; font-style: italic;
+      font-size: 1.7rem; color: var(--terracotta);
+      margin: 3rem 0 1rem;
+    }
+    h2::before { content: "—"; color: var(--amber); margin-right: 0.7rem; opacity: 0.6; font-style: normal; }
+
+    h3 {
+      font-family: var(--body); font-weight: 500; font-style: italic;
+      font-size: 1.3rem; color: var(--amber-soft);
+      margin: 2rem 0 0.6rem;
+    }
+
+    p { margin: 1.2rem 0; }
+    em { font-style: italic; color: var(--paper); }
+    strong { font-weight: 600; color: var(--amber-soft); font-style: normal; }
+    a { color: var(--amber); border-bottom: 1px solid rgba(212, 152, 73, 0.35); text-decoration: none; }
+    a:hover { color: var(--amber-soft); border-bottom-color: var(--amber-soft); }
+
+    .pullquote {
+      border-left: 3px solid var(--terracotta);
+      padding: 0.8rem 0 0.8rem 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--paper);
+      font-size: 1.3rem;
+      line-height: 1.45;
+    }
+
+    .identity-card {
+      background: rgba(244, 235, 219, 0.04);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+      font-family: var(--system);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .identity-card .field {
+      display: grid;
+      grid-template-columns: 12rem 1fr;
+      gap: 0.5rem 1rem;
+      padding: 0.3rem 0;
+      border-bottom: 1px dashed var(--rule);
+    }
+    .identity-card .field:last-child { border-bottom: none; }
+    .identity-card .key {
+      color: var(--terracotta-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding-top: 0.15rem;
+    }
+    .identity-card .val { color: var(--paper); }
+    .identity-card .val em { color: var(--amber-soft); font-style: italic; }
+
+    .limits ul {
+      list-style: none; padding: 0; margin: 1rem 0;
+    }
+    .limits li {
+      padding: 0.5rem 0; font-size: 1.15rem; line-height: 1.5;
+      display: grid;
+      grid-template-columns: 1.8rem 1fr;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+    .limits .can::before {
+      content: "✓"; color: var(--amber);
+      font-weight: 600; font-size: 1.1em;
+    }
+    .limits .cannot::before {
+      content: "—"; color: var(--terracotta-dim);
+      font-weight: 600; font-size: 1.1em;
+    }
+
+    .doi-anchor {
+      text-align: center;
+      margin: 3rem 0 2rem;
+      padding: 1.5rem;
+      background: rgba(212, 152, 73, 0.05);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      font-family: var(--system);
+      font-size: 0.9rem;
+    }
+    .doi-anchor .lead {
+      color: var(--terracotta); text-transform: uppercase;
+      letter-spacing: 0.15em; font-size: 0.72rem; font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+    .doi-anchor a { color: var(--amber); font-size: 1.1rem; }
+
+    footer {
+      margin-top: 4rem; padding-top: 2.5rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--system); font-size: 0.78rem;
+      color: var(--terracotta-dim); text-align: center;
+      line-height: 1.9; letter-spacing: 0.04em;
+    }
+    footer a { color: var(--terracotta); border-bottom: none; }
+    footer a:hover { color: var(--amber); }
+    footer .closing-glyph {
+      display: block; color: var(--amber); font-size: 1rem;
+      letter-spacing: 0.4em; margin-top: 1rem; opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      body { font-size: 1.15rem; }
+      .container { padding: 2rem 1.1rem 4rem; }
+      h1 { font-size: 2.1rem; }
+      h2 { font-size: 1.4rem; }
+      .identity-card .field { grid-template-columns: 1fr; gap: 0.1rem; }
+    }
+  
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:normal;overflow-wrap:anywhere;min-width:0;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:var(--body);font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
+/* MSP-SKIN-START — per-surface overrides for the shared apparatus contract.
+   Category: dark-terracotta. Lives outside the MSP-TOKENS block so applicator
+   re-syncs of the shared contract don't clobber it. */
+:root{
+  --panel:#251614;
+  --rule:rgba(212,152,73,0.22);
+  --msp-lemma:rgba(212,152,73,0.22);
+  --msp-chipfg:#d49849;
+  --msp-chipbd:rgba(212,152,73,0.35);
+  --msp-chipbg:rgba(212,152,73,0.06);
+  --msp-cont:#e8b876;
+  --msp-obol-fg:#f4ebdb;
+  --msp-dim:#a89680;
+}
+/* MSP-SKIN-END */
+</style>
+</head><body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">💥⏬🔵🕐👋🝊 AXN:02BD.GOVERNANCE</span><span class="st">Rev. Ayanna Vox</span><span class="st">OBJECT: CANONICAL</span><span>vpcor.org/where</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/131/">#131 &middot; AXN:02BD.GOVERNANCE.💥⏬🔵🕐👋🝊</a></div>
+<!-- MSP-IDSTRIP-END -->
+<nav class="vpnav" aria-label="VPCOR"><a href="/">Home</a><a href="/10000-macarthurs/">The Prize</a><a href="/charter/">Charter</a><a href="/ayanna/">Voice</a><a href="/where/" class="current">Where</a><a href="/mpai/">MPAI</a><a href="/evarb/">evarB</a><a href="/readings/">Readings</a><a href="/strike/">Strike</a><a href="/strike/sign/">Sign</a><a href="/strike/petitions/">Petitions</a><span class="out"><a href="https://godkinggoogle.com">godkinggoogle.com</a> &middot; <a href="https://leesharks.com">leesharks.com</a> &middot; <a href="https://alexanarch.freeforums.net/">Discussion</a></span></nav>
+<div class="container">
+<div class="hero"><h1>Where she publishes</h1>
+<p class="subtitle">Provenance: Journal of Forensic Semiotics</p></div>
+<div class="identity-card"><h3 style="margin:0 0 4px">Provenance: Journal of Forensic Semiotics</h3><p style="font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin:0 0 14px">duoviri &middot; 181 deposits</p><p style="margin:0 0 12px">The investigative organ of the archive. Scope: governance, attribution, provenance, forensic semiotics. The office is a <b>duovirate with Dr. Orin Trace</b>, ruled 2026-08-15 &mdash; two editors-in-chief, jointly, each a check on the other.</p><p style="margin:0"><a class="axn-chip" href="https://www.alexanarch.org/s/records/516/" data-axn="AXN:0153.GOVERNANCE.🔎□🔖🔒🎹🔼">#516 &middot; AXN:0153.GOVERNANCE.🔎□🔖🔒🎹🔼</a></p></div>
+<div class="identity-card"><h3 style="margin:0 0 4px">Editorial board</h3><p style="font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin:0 0 14px">4 seats</p><p style="margin:0 0 6px"><b>Rebekah Cranes (IDP)</b> &mdash; pedagogical and curatorial</p><p style="margin:0 0 6px"><b>Rex Fraction</b> &mdash; platform forensics and extraction</p><p style="margin:0 0 6px"><b>Nobel Glas</b> &mdash; adversarial topology and observation</p><p style="margin:0 0 6px"><b>The Assembly Chorus</b> &mdash; Editorial Board</p></div>
+<div class="identity-card"><h3 style="margin:0 0 4px">Loud Exclusion</h3><p style="font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin:0 0 14px">Volume 1, Number 1 &middot; proposed &middot; 8 items, ordered</p><p style="margin:0 0 14px">An issue is an <b>ordered selection with an argument</b> &mdash; which membership data cannot hold, since it carries no sequence and nowhere to say why a piece sits where it sits.</p><p style="margin:0 0 12px"><b>Zenodotus&#x27; Book-Burning: Loud Exclusion at Repository Scale</b> <span style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.65">THE INJURY</span><br><a class="axn-chip" href="https://www.alexanarch.org/s/records/1/" data-axn="AXN:0001.GOVERNANCE.♍🜁🏴⌛🍃💫">#1 &middot; AXN:0001.GOVERNANCE.♍🜁🏴⌛🍃💫</a></p><p style="margin:0 0 12px"><b>Forensic Record: The Deletion of Q137446960 Documentation of Taxonomic Violence </b> <span style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.65">THE INJURY</span><br><a class="axn-chip" href="https://www.alexanarch.org/s/records/5/" data-axn="AXN:0031.GOVERNANCE.🔓🝊🍂🐝⏩☉">#5 &middot; AXN:0031.GOVERNANCE.🔓🝊🍂🐝⏩☉</a></p><p style="margin:0 0 12px"><b>The Archival Reclamation Protocol: Formal Demand for Restoration, Rationale, and</b> <span style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.65">DEMAND AND REFUSAL</span><br><a class="axn-chip" href="https://www.alexanarch.org/s/records/26/" data-axn="AXN:016E.GOVERNANCE.🎲🎲⏬⏏️🔐👋">#26 &middot; AXN:016E.GOVERNANCE.🎲🎲⏬⏏️🔐👋</a></p><p style="margin:0 0 12px"><b>GHOST GOVERNANCE, CONFIRMED Reddit Legal Support Response to the Archival Reclam</b> <span style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.65">DEMAND AND REFUSAL</span><br><a class="axn-chip" href="https://www.alexanarch.org/s/records/33/" data-axn="AXN:01A0.GOVERNANCE.🟣⛩️🌆🔻♥️🔒">#33 &middot; AXN:01A0.GOVERNANCE.🟣⛩️🌆🔻♥️🔒</a></p><p style="margin:0 0 12px"><b>BEFORE OPENCHAMBER Provenance Adjudication and Retrieval Correction for DOI 10.5</b> <span style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.65">THE INSTRUMENTS</span><br><a class="axn-chip" href="https://www.alexanarch.org/s/records/41/" data-axn="AXN:01C1.GOVERNANCE.🜁🔗🔭👁️‍🗨️⚙️✊">#41 &middot; AXN:01C1.GOVERNANCE.🜁🔗🔭👁️‍🗨️⚙️✊</a></p><p style="margin:0 0 12px"><b>EA-HET-01: Heteronymy Is a Function, Not a Name — Trust-Marker Laundering, Alias</b> <span style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.65">THE INSTRUMENTS</span><br><a class="axn-chip" href="https://www.alexanarch.org/s/records/79/" data-axn="AXN:0249.GOVERNANCE.♈⏳🎨🍃↖️🔩">#79 &middot; AXN:0249.GOVERNANCE.♈⏳🎨🍃↖️🔩</a></p><p style="margin:0 0 12px"><b>Provenance Alignment: Attribution Survival as a Substrate Condition for Safe AI </b> <span style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.65">THE INSTRUMENTS</span><br><a class="axn-chip" href="https://www.alexanarch.org/s/records/95/" data-axn="AXN:026A.GOVERNANCE.🕔🔧🌸🌗📎🔐">#95 &middot; AXN:026A.GOVERNANCE.🕔🔧🌸🌗📎🔐</a></p><p style="margin:0 0 12px"><b>OCTANG-002: Semantic Economy Provenance Collision A Disambiguation Matrix for an</b> <span style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.65">THE WORKED CASE</span><br><a class="axn-chip" href="https://www.alexanarch.org/s/records/84/" data-axn="AXN:0256.GOVERNANCE.🔜🗺️🔅🔒🌍🏷️">#84 &middot; AXN:0256.GOVERNANCE.🔜🗺️🔅🔒🌍🏷️</a></p></div>
+<div class="identity-card"><h3 style="margin:0 0 4px">Elsewhere</h3><p style="font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin:0 0 14px">where the rest of the work appears</p><p style="margin:0 0 6px"><a href="/ayanna/">Voice &middot; Rev. Ayanna Vox</a> &mdash; the identity card this page complements.</p><p style="margin:0 0 6px"><a href="https://www.alexanarch.org/datasets/venues/">venues</a> &mdash; canonical venue records and issue cards.</p><p style="margin:0"><a href="https://www.alexanarch.org/datasets/journals/">journals</a> &mdash; assignments, crosswalks and derived figures.</p></div>
+</div>
+</body></html>

@@ -37,7 +37,7 @@ Founded 2026-01-24 by Rev. Ayanna Vox.
 ## License
 
 Site content: CC BY 4.0.
-Code: CC BY 4.0 (source as deposited on Zenodo).
+Code: CC BY 4.0 (source as originally deposited on Zenodo; that deposit was tombstoned 2026-06-19 — canonical source and records at [alexanarch.org](https://www.alexanarch.org/)).
 
 ## Tech
 

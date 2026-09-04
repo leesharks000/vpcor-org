@@ -13,4 +13,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://vpcor.org/sitemap.xml
+Sitemap: https://www.vpcor.org/sitemap.xml

@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Petitions — Notice of Semantic Strike | VPCOR</title>
-<link rel="canonical" href="https://www.vpcor.org/strike/petitions/">
+<link rel="canonical" href="https://www.vpcor.org/strike/petitions">
 <meta name="description" content="Closed petitions to the Notice of Semantic Strike. Each is one signing session, carrying an AXN, signed by the dead, the invented, and the generated. Every signatory is impossible; what is recorded is a performance of the form.">
 <link rel="stylesheet" href="/assets/type.css">
 <style>
@@ -26,7 +26,7 @@ ol.ref{font-size:.94em} ol.ref li{margin:.35rem 0}
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 </head><body>
-<nav class="vpnav" aria-label="VPCOR"><a href="/">Home</a><a href="/10000-macarthurs/">The Prize</a><a href="/charter/">Charter</a><a href="/ayanna/">Voice</a><a href="/where/">Where</a><a href="/ayanna/who/">Who</a><a href="/mpai/">MPAI</a><a href="/evarb/">evarB</a><a href="/readings/">Readings</a><a href="/strike/">Strike</a><a href="/strike/sign/">Sign</a><a href="/strike/petitions/" class="current">Petitions</a><span class="out"><a href="https://godkinggoogle.com">godkinggoogle.com</a> &middot; <a href="https://leesharks.com">leesharks.com</a> &middot; <a href="https://alexanarch.freeforums.net/">Discussion</a></span></nav>
+<nav class="vpnav" aria-label="VPCOR"><a href="/">Home</a><a href="/10000-macarthurs">The Prize</a><a href="/charter">Charter</a><a href="/ayanna">Voice</a><a href="/where">Where</a><a href="/ayanna/who">Who</a><a href="/mpai">MPAI</a><a href="/evarb">evarB</a><a href="/readings">Readings</a><a href="/strike">Strike</a><a href="/strike/sign">Sign</a><a href="/strike/petitions" class="current">Petitions</a><span class="out"><a href="https://godkinggoogle.com">godkinggoogle.com</a> &middot; <a href="https://leesharks.com">leesharks.com</a> &middot; <a href="https://alexanarch.freeforums.net/">Discussion</a></span></nav>
 <div class="vporn vporn--rule" role="presentation" aria-hidden="true">
 <svg viewBox="0 0 340 22" xmlns="http://www.w3.org/2000/svg">
 <g fill="none" stroke="var(--rule,rgba(212,152,73,.5))" stroke-width="1">
@@ -58,8 +58,8 @@ function one(p){
     '<p style="font-size:.85em;opacity:.7">' + esc(p.refusals_source) + '</p>' +
     '<h2>The undersigned</h2>' + sigs +
     '<p style="margin-top:2rem;font-size:.85em;opacity:.7">' + esc(p.note) +
-    '</p><p style="font-size:.9em"><a href="/strike/petitions/">All petitions</a> · ' +
-    '<a href="/strike/sign/">Open a new one</a></p>';
+    '</p><p style="font-size:.9em"><a href="/strike/petitions">All petitions</a> · ' +
+    '<a href="/strike/sign">Open a new one</a></p>';
 }
 
 function list(d){
@@ -75,8 +75,8 @@ function list(d){
     'session\u2019s signatories. Each carries an AXN under the PETITION family and does not enter the ' +
     'Alexanarch deposit registry \u2014 the convention the Book tab keeps for auto-appended sessions. ' +
     'Within a petition the named subscribe once each; across petitions the canon is unbounded.</p>' +
-    (rows || '<p style="opacity:.7">No petitions closed yet. <a href="/strike/sign/">Open the first.</a></p>') +
-    '<p style="margin-top:2rem;font-size:.9em"><a href="/strike/sign/">Open a petition</a> · <a href="/strike/">The Notice</a></p>';
+    (rows || '<p style="opacity:.7">No petitions closed yet. <a href="/strike/sign">Open the first.</a></p>') +
+    '<p style="margin-top:2rem;font-size:.9em"><a href="/strike/sign">Open a petition</a> · <a href="/strike">The Notice</a></p>';
 }
 
 fetch('/api/sign' + (hex ? '?axn=' + encodeURIComponent(hex) : ''))
@@ -85,7 +85,7 @@ fetch('/api/sign' + (hex ? '?axn=' + encodeURIComponent(hex) : ''))
     if (d && d.ok === false) {
       v.innerHTML = '<h1>Petitions</h1><div class="sub">Not yet keeping records.</div>' +
         '<p>' + esc(d.note) + ' Signatures may still be performed at ' +
-        '<a href="/strike/sign/">the signature surface</a>; sessions will close into petitions ' +
+        '<a href="/strike/sign">the signature surface</a>; sessions will close into petitions ' +
         'once the store is connected.</p>';
     } else if (hex) one(d); else list(d);
   })
